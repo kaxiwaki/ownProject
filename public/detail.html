@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh-cn" ng-app="hjwApp">
+
+<head>
+  <meta charset="UTF-8">
+  <title>婚礼商场</title>
+  <link rel="stylesheet" href="css/detail.css">
+  <script src="js/angular.js"></script>
+  <script src="js/angular-route.js"></script>
+</head>
+
+<body ng-controller="hjwCtrl">
+  <header></header>
+  <section>
+    <!--顶部细节-->
+    <div id="top" class="container">
+      <!--面包屑-->
+      <ul>
+        <li>南京婚庆&gt;南京司仪&gt;{{list.sname}}</li>
+        <li>已有 <span>8555</span> 人看过</li>
+      </ul>
+      <!--详细介绍-->
+      <div>
+        <!--左边-->
+        <div class="lf left">
+          <div class="try-listen">
+            <p></p>
+            <audio src="res/bg.mp3"></audio>
+          </div>
+          <p>已优惠 1000元，点此分享给朋友参考</p>
+        </div>
+        <!--右边-->
+        <div class="lf right">
+          <h2>{{list.sname}}<a></a><span>金牌司仪</span></h2>
+          <hr>
+          <ul>
+            <li>
+              <span>工作经验： {{list.sexp}}年</span>
+              <span>服务地区： 江苏|上海|浙江</span>
+            </li>
+            <li>所在地区：{{list.slocation}}</li>
+            <li>司仪技能：{{list.skill}}</li>
+            <li>选择日期：</li>
+          </ul>
+          <div class="price">
+            <div ng-hide="hasLogin" class="ifLogin">
+              <div>需要登录才能添加购物车哦~~</div>
+            </div>
+            <p>
+              <b>
+              <b>¥</b>
+              <span>{{list.sprice}}</span>
+              </b>
+              <s>
+                <span>市场价</span>
+                <i>{{list.sprice+1000}}元</i>
+              </s>
+              <a href="#" ng-click="updateCart()">加入订单 <span></span></a>
+              <a href="#">免费联系 <span></span></a>
+            </p>
+          </div>
+          <p>非司仪本地用户下单,需支付司仪来回车费,具体和司仪联系协商</p>
+          <ol>
+            <li>7天无理由退款</li>
+            <li>服务质量保障</li>
+            <li>商户信用认证</li>
+          </ol>
+        </div>
+      </div>
+      <!--下方附加项,督导,调音师-->
+      <div class="bottom clear">
+        <h3 class="clear">升级特色服务</h3>
+        <ul>
+          <li>
+            <div>
+              <p>调音师</p>
+              <p>+600元</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>督导</p>
+              <p>+600元</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--司仪美照-->
+    <div id="details" class="clear container">
+      <div class="title">
+        <div>
+          <p>司仪美照</p>
+          <p>MC Photo</p>
+        </div>
+        <hr>
+        <p>共 <span>11</span> 张照片</p>
+      </div>
+      <div class="photo clear">
+        <div class="photo-left lf">
+          <img src="img/sin.jpg" alt="">
+          <a href="#"></a>
+        </div>
+        <ul class="photo-right lf">
+          <li><img src="img/get1.jpg"></li>
+          <li><img src="img/get2.jpg"></li>
+          <li><img src="img/get3.jpg"></li>
+          <li><img src="img/get4.jpg"></li>
+        </ul>
+      </div>
+      <!--司仪视频-->
+      <div class="title">
+        <div>
+          <p>司仪视频</p>
+          <p>MC Video</p>
+        </div>
+        <hr>
+      </div>
+      <div class="clear videoBox">
+        <div class="pause"><img src="img/pause.png" alt=""></div>
+        <div class="play">
+          <div>
+            <img src="img/play.png" alt="">
+          </div>
+          <p>视频时长：<span></span>s</p>
+        </div>
+        <video src="res/birds.mp4" width="1198" height="523" id="myvideo">
+          您的浏览器不支持video播放
+        </video>
+      </div>
+      <!--司仪介绍-->
+      <div class="title self">
+        <div>
+          <p>司仪详情</p>
+          <p>Self Introduction</p>
+        </div>
+        <hr>
+      </div>
+      <ul class="intro">
+        <li class="clear">
+          <i></i>
+          <div>
+            <p>星光 | 10年经验</p>
+            <p>司仪身高: 178出门 | 现所在地 : 南京</p>
+          </div>
+        </li>
+        <li class="clear">
+          <i></i>
+          <div>
+            <h2>司仪简介</h2>
+            <p>
+              做有思想的司仪，主持有灵魂的婚礼！当人们问道，如何解读他的“有思想”，他说：就要多学习。从入行到现在，他学习的脚步便从未停下。他觉得每场婚礼都要有它的灵魂所在，不能千篇一律，这就要求结合新人的故事去做策划，无论是整场策划还是策划一个点，因为只有与众不同，婚礼才能被人记住，才能回味无穷。
+            </p>
+          </div>
+        </li>
+        <li class="clear">
+          <i></i>
+          <div>
+            <h2>服务内容</h2>
+            <p>司仪提供服务包括：中式婚礼、西式婚礼、DIY婚礼、彩排</p>
+            <p>司仪主持服装和主持风格：根据需要安排服装，主持风格会和新人婚礼前沟通</p>
+            <p>司仪是否当面沟通：司仪会根据新人要求，约好时间地点线下沟通</p>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+    <!--各种服务-->
+    <div id="service" class="clear container">
+      <div class="title service">
+        <div>
+          <p>服务流程</p>
+          <p>Service process</p>
+        </div>
+        <hr>
+      </div>
+      <!--预约司仪-->
+      <div class="order clear">
+        <div class="clear top">
+          <img src="img/apt_mc_icon.png">
+          <span>预约司仪</span>
+        </div>
+        <ul>
+          <li>
+            <img src="img/apt_pro_icon_0.png">
+            <span>免费预约目标司仪后，婚礼督导会第一时间与您电话联系，确认婚期和相关信息。</span>
+          </li>
+          <li>
+            <img src="img/apt_pro_icon_2.png">
+            <span>确认司仪空余档期与您预约时间相符后，如需当面沟通，需支付200元定金，婚聚网会联系司仪与您会面，当面确认婚礼相关事宜。</span>
+          </li>
+          <li>
+            <img src="img/apt_pro_icon_4.png">
+            <span>如果双方见面后，对司仪不满意即可再选择其他司仪。</span>
+          </li>
+          <li>
+            <img src="img/apt_pro_icon_1.png" alt="">
+            <span>沟通满意后，您需向婚聚网支付总价20%费用作为保障金，防止司仪被他人预定，耽误婚期。</span>
+          </li>
+          <li>
+            <img src="img/apt_pro_icon_1.png">
+            <span>新人需在一个月内支付余下80%的费用。如用户私下交易，所造成的风险（如司仪逃单，态度恶劣等）婚聚网不承担任何责任。</span>
+          </li>
+          <li>
+            <img src="img/apt_pro_icon_4.png">
+            <span>预付定金后,如新人单方面更改档期导致服务无法完成,定金不予退回。</span>
+          </li>
+          <li>
+            <img src="img/apt_pro_icon_5.png">
+            <span>婚聚网推荐您选择在线付款，以保障您的所有权益。</span>
+          </li>
+          <li>
+            <img src="img/apt_pro_icon_5.png">
+            <button>司仪沟通小贴士?</button>
+          </li>
+        </ul>
+      </div>
+      <!--婚礼当天-->
+      <div class="the-day">
+        <div class="clear top">
+          <img src="img/apt_mc_icon.png">
+          <span>婚礼当天</span>
+        </div>
+        <ul>
+          <li>
+            <img src="img/apt-ren.png">
+            <span>婚礼司仪会在婚礼开始前提前到场，进行相关的准备工作。</span>
+          </li>
+          <li>
+            <img src="img/apt-zhunbei.png">
+            <span>根据现场情况，新人按照司仪要求或自己的想法开始婚礼仪式的彩排工作，熟悉婚礼流程，演绎完美婚礼。</span>
+          </li>
+          <li>
+            <img src="img/apt-fan.PNG">
+            <span>尽量帮助安排司仪工作餐一顿(中餐或晚餐)，如不安排请在电话或见面当天提前告知司仪。</span>
+          </li>
+          <li>
+            <img src="img/apt_pro_icon_6.png" alt="">
+            <div class="inclu">
+              <p>司仪当天的工作可能还包括</p>
+              <ul>
+                <li>与主婚人、证婚人、及发言人沟通好发言次序、及需要配合的相关环节；</li>
+                <li>与伴郎伴娘、兄弟姊妹沟通好入场鸣礼炮、洒鲜花、新人登台、抛花球等各环节的配合方式</li>
+                <li>排练花童(如果打算让花童送戒指上台的话)；</li>
+                <li>摄像师、摄影师沟通好流程，让他们更清楚流程，以实现更好的拍摄效果；</li>
+                <li>与督导、礼仪、服务员、音响师、灯光师沟通好，让他们知道各个环节该如何配合。</li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!--婚礼结束-->
+      <div class="wed-end">
+        <div class="clear top">
+          <img src="img/apt_mc_icon.png">
+          <span>婚礼结束</span>
+        </div>
+        <ul>
+          <li>
+            <img src="img/apt_pro_icon_7.png">
+            <span>婚礼结束,司仪服务完结。</span>
+          </li>
+          <li>
+            <img src="img/apt_pro_icon_0.png">
+            <span>婚聚网会在婚礼结束后15天内对您进行电话回访,听取您的宝贵意见和建议。</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--购买须知-->
+    <div id="perchNote" class="container">
+      <div class="title">
+        <div>
+          <p>购买须知</p>
+          <p>Perchance Note</p>
+        </div>
+        <hr>
+      </div>
+      <ul>
+        <li>1.因婚礼从业人员需要准备时间，为了避免耽误您的婚礼筹备工作，请至少提前10个工作日预定相关服务；</li>
+        <li>2.请第一时间与服务人员确认档期是否可用，以免耽误您的宝贵时间；</li>
+        <li>3.在预订成功后，如需退款，请至少提前7个工作日申请；</li>
+        <li>
+          4.在预定成功后，由于服务人员遇到不可抗力事件所直接造成的延误或不能履行服务义务，提供相应证明材料，并通过婚聚网审核后。婚聚网负责协调同等价位人员服务，或全额退还预订费用。
+        </li>
+        <li>5.在预定成功后，由于新人遇到不可抗力事件所直接造成的服务取消，可选择退订，提供相应证明材料，并通过婚聚网审核后，定金方可退还。</li>
+        <li>6.由于第三方侵害等不可归责于婚聚网的原因导致新人人身、财产权受到损害的，婚聚网不承担责任，但会积极协助解决新人与责任方之间的纠纷。</li>
+        <li>7.黄金周、特殊节日等结婚旺季，人员预订以款到确认为准，一经确认不得随意变更。</li>
+        <li></li>
+      </ul>
+    </div>
+    <div id="comment" class="container">
+      <!--评论信息头部-->
+      <div class="title">
+        <div>
+          <p>用户评价</p>
+          <p>User Evaluation</p>
+        </div>
+        <hr>
+      </div>
+      <div class="comment-total">
+        <div class="left lf">
+          <h1>4.9</h1>
+          <p class="star"></p>
+          <h3>共 <span>11</span> 人评价</h3>
+        </div>
+        <ul class="right">
+          <li>司仪声音4.5分
+            <i class="out">
+            <i class="in"></i>
+            </i>
+          </li>
+          <li>现场把控4.7分
+            <i class="out">
+            <i class="in"></i>
+            </i>
+          </li>
+          <li>服务态度4.7分
+            <i class="out">
+            <i class="in"></i>
+            </i>
+          </li>
+        </ul>
+      </div>
+      <!--评论详情-->
+      <div class="comment-detail">
+        <ul class="container clear">
+          <li class="active">全部11</li>
+          <li>好评11</li>
+          <li>差评0</li>
+          <li>有图片</li>
+        </ul>
+        <ul class="de-com">
+          <li class="clear">
+            <div class="d-left lf">
+              <i></i>
+              <p>嘟嘟小马达</p>
+            </div>
+            <div class="d-right lf">
+              <ul class="clear">
+                <li>司仪声音5分</li>
+                <li>现场把控5分</li>
+                <li>服务态度5分</li>
+              </ul>
+              <p class="clear">很开心遇到了星光，没有后悔选择婚聚网</p>
+              <span>2017-05-14</span>
+            </div>
+          </li>
+          <li class="clear">
+            <div class="d-left lf">
+              <i></i>
+              <p>嘟嘟小马达</p>
+            </div>
+            <div class="d-right lf">
+              <ul class="clear">
+                <li>司仪声音5分</li>
+                <li>现场把控5分</li>
+                <li>服务态度5分</li>
+              </ul>
+              <p class="clear">很开心遇到了星光，没有后悔选择婚聚网</p>
+              <span>2017-05-14</span>
+            </div>
+          </li>
+          <li class="clear">
+            <div class="d-left lf">
+              <i></i>
+              <p>嘟嘟小马达</p>
+            </div>
+            <div class="d-right lf">
+              <ul class="clear">
+                <li>司仪声音5分</li>
+                <li>现场把控5分</li>
+                <li>服务态度5分</li>
+              </ul>
+              <p class="clear">很开心遇到了星光，没有后悔选择婚聚网</p>
+              <span>2017-05-14</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/jquery-1.11.3.js"></script>
+  <script src="js/detail.js"></script>
+</body>
+
+</html>

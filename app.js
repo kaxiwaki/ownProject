@@ -1,0 +1,12 @@
+const express=require('express');
+const http=require('http');
+const user=require('./user');
+const detail=require('./detail');
+var app=express();
+http.createServer(app).listen(8080);
+app.use(express.static('public'));
+app.post('/user/phone',user.phone);
+app.post('/user/register',user.register);
+app.get('/user/login',user.login);
+app.get('/hjwDetail/:sid',detail.items);
+app.get('/hjwCart',detail.addOrder);

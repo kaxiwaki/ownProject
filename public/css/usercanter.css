@@ -1,0 +1,534 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font: 12px "microsoft yehei", Arial, Helvetica, sans-serif;
+  color: #666;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+dd,
+button {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.clear:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.clear:before {
+  content: "";
+  display: table;
+}
+.header {
+  width: 100%;
+  height: 346px;
+  overflow: hidden;
+  position: relative;
+  z-index: -1;
+}
+.header .img_list {
+  width: 100%;
+  height: 100%;
+}
+.header .img_list ul {
+  width: 1920px;
+  height: 100%;
+}
+.header .img_list ul li {
+  float: left;
+}
+.header .date {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+.header .date img {
+  margin-top: 80px;
+}
+.header .date p {
+  color: #fff;
+  font-size: 1.7em;
+  margin: 5px 0;
+}
+.header .date span {
+  color: #fff;
+  font-size: 2.8em;
+}
+.content {
+  width: 1200px;
+  height: 1500px;
+  margin: 0 auto;
+  margin-top: -110px;
+}
+.content .user_name {
+  width: 1200px;
+  height: 372px;
+  overflow: hidden;
+}
+.content .user_name .user_left {
+  width: 725px;
+  height: 372px;
+  position: relative;
+  float: left;
+}
+.content .user_name .user_left .left_top {
+  width: 725px;
+  height: 201px;
+  background: url(../img/infoBg.jpg) no-repeat;
+}
+.content .user_name .user_left .left_bottom {
+  width: 725px;
+  height: 171px;
+  background: #FE538B;
+  position: relative;
+}
+.content .user_name .user_left .left_bottom div {
+  width: 725px;
+  height: 110px;
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+}
+.content .user_name .user_left .left_bottom div p {
+  float: right;
+  margin-right: 50px;
+  font-size: 3em;
+  line-height: 110px;
+}
+.content .user_name .user_left .left_bottom div h2 {
+  margin: 20px 20px;
+}
+.content .user_name .user_left .left_bottom div span {
+  margin: 0 20px;
+  cursor: pointer;
+}
+.content .user_name .user_left .user_model {
+  width: 725px;
+  height: 64px;
+  background: rgba(0, 0, 0, 0.45);
+  position: absolute;
+  top: 201px;
+  left: 0;
+}
+.content .user_name .user_left .user_model p {
+  line-height: 64px;
+  padding-left: 150px;
+  color: #fff;
+  font-size: 2em;
+}
+.content .user_name .user_left .user_model img.camera {
+  width: 96px;
+  height: 96px;
+  position: absolute;
+  top: -50px;
+  left: 29px;
+}
+.content .user_name .user_left .user_model div.mouse {
+  width: 96px;
+  height: 96px;
+  position: absolute;
+  top: -50px;
+  left: 29px;
+  z-index: 10;
+}
+.content .user_name .user_left .user_model div.bj {
+  width: 110px;
+  height: 110px;
+  position: absolute;
+  top: -50px;
+  left: 29px;
+  display: none;
+  background: url(../img/touxiang_hover.png) no-repeat;
+}
+.content .user_name .user_left .user_model div.bj img {
+  width: 100px;
+  height: 100px;
+}
+.content .user_name .user_left .user_model img.camera:hover div.bj {
+  display: block;
+}
+.content .user_name .user_left .user_model span {
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  top: 20px;
+  right: 30px;
+  background: url(../img/writeBt_0.png) no-repeat;
+  cursor: pointer;
+}
+.content .user_name .user_right {
+  width: 465px;
+  height: 372px;
+  margin-left: 735px;
+}
+.content .user_name .user_right .right_top {
+  width: 465px;
+  height: 265px;
+  background: #6EDAE2;
+  padding: 10px;
+}
+.content .user_name .user_right .right_top .border {
+  border: 1px dashed #fff;
+  margin: 10px 0;
+}
+.content .user_name .user_right .right_top .right_top_top {
+  color: #fff;
+  margin-top: 20px;
+}
+.content .user_name .user_right .right_top .right_top_top p {
+  font-size: 80px;
+}
+.content .user_name .user_right .right_top .unPay_totalPay {
+  width: 441px;
+  margin-left: 24px;
+  margin-top: 25px;
+}
+.content .user_name .user_right .right_top .unPay_totalPay span {
+  font-size: 16px;
+}
+.content .user_name .user_right .right_top .unPay_totalPay p {
+  font-size: 55px;
+}
+.content .user_name .user_right .right_top .unPay_totalPay .un_left {
+  width: 194px;
+  border-right: 1px dashed #555;
+  float: left;
+  height: 75px;
+}
+.content .user_name .user_right .right_top .unPay_totalPay .un_right {
+  width: 194px;
+  height: 75px;
+  margin-left: 194px;
+  padding-left: 30px;
+}
+.content .user_name .user_right .right_bottom {
+  width: 465px;
+  height: 110px;
+  background: #EAF061;
+}
+.content .user_name .user_right .right_bottom > p {
+  float: right;
+  font-size: 30px;
+  margin-right: 30px;
+  margin-top: 34px;
+}
+.content .user_name .user_right .right_bottom div {
+  float: left;
+  margin-top: 34px;
+  margin-left: 30px;
+}
+.content .user_name .user_right .right_bottom div p {
+  font-size: 22px;
+}
+.content .user_name .user_right .right_bottom div span {
+  font-size: 14px;
+}
+.content .choose_date {
+  width: 1200px;
+  height: 255px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+.content .choose_date .date_left {
+  width: 725px;
+  height: 285px;
+  position: relative;
+  float: left;
+}
+.content .choose_date .date_left .date_left_top {
+  width: 725px;
+  height: 46px;
+}
+.content .choose_date .date_left .date_left_top p {
+  float: right;
+  width: 16px;
+  height: 16px;
+  margin-top: 15px;
+}
+.content .choose_date .date_left .date_left_top ul {
+  height: 46px;
+  float: left;
+  border-left: 1px solid #eee2d7;
+}
+.content .choose_date .date_left .date_left_top ul li {
+  width: 86px;
+  height: 44px;
+  float: left;
+  border: 1px solid #eee2d7;
+  border-left: none;
+  color: #eee2d7;
+  background: #fff;
+  line-height: 44px;
+  text-align: center;
+  font-size: 14px;
+}
+.content .choose_date .date_left .date_left_top ul li:hover {
+  background: #f2efe9;
+  color: #565656;
+  border-bottom: 1px solid #f2efe9;
+}
+.content .choose_date .date_left .date_left_top ul li.active {
+  background: #f2efe9;
+  color: #565656;
+  border-bottom: 1px solid #f2efe9;
+}
+.content .choose_date .date_left .date_left_bottom {
+  width: 725px;
+  height: 211px;
+  margin-top: -3px;
+  border: 1px solid #eee2d7;
+  background: #f2efe9;
+  padding: 25px 24px 25px 18px;
+}
+.content .choose_date .date_left .date_left_bottom .isDate {
+  float: left;
+}
+.content .choose_date .date_left .date_left_bottom .isDate span {
+  font-size: 14px;
+}
+.content .choose_date .date_left .date_left_bottom .isDate p.num {
+  font-size: 48px;
+  margin-top: 10px;
+}
+.content .choose_date .date_left .date_left_bottom .obj_content {
+  width: 611px;
+  height: 157px;
+  float: right;
+  background: #fff;
+  border: 1px solid #eee2d7;
+  cursor: pointer ;
+  position: relative;
+}
+.content .choose_date .date_left .date_left_bottom .obj_content div {
+  width: 220px;
+  height: 47px;
+  margin: 0 auto;
+  margin-top: 56px;
+}
+.content .choose_date .date_left .date_left_bottom .obj_content div p {
+  font-size: 24px;
+  color: #6f6f6f;
+}
+.content .choose_date .date_left .date_left_bottom .obj_content div span {
+  width: 12px;
+  margin-left: 25px;
+  margin-top: 8px;
+  color: #6d6d6d;
+}
+.content .choose_date .date_left .date_left_bottom .obj_content:hover {
+  background: #CFCFCF;
+}
+.content .choose_date .date_right {
+  width: 465px;
+  height: 285px;
+  margin-left: 735px;
+}
+.content .choose_date .date_right .marry {
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+}
+.content .choose_date .date_right .marry p {
+  float: right;
+}
+.content .choose_date .date_right .right_content {
+  width: 467px;
+  height: 209px;
+  border: 1px solid #eee2d7;
+  background: #f2efe9;
+  position: relative;
+  padding: 25px 26px;
+}
+.content .choose_date .date_right .right_content .content_date {
+  width: 411px;
+  height: 155px;
+  background: #fff;
+  border: 1px solid #eee2d7;
+  cursor: pointer;
+  padding: 20px 30px;
+}
+.content .choose_date .date_right .right_content .content_date p {
+  font-size: 14px;
+}
+.content .choose_date .date_right .right_content .content_date .date_info {
+  width: 100%;
+  margin-top: 10px;
+}
+.content .choose_date .date_right .right_content .content_date .date_info .info_left {
+  width: 99px;
+  float: left;
+  height: 78px;
+  border-right: 1px dashed #c2c2c2;
+}
+.content .choose_date .date_right .right_content .content_date .date_info .info_left span {
+  color: #aaa;
+  font-size: 20px;
+}
+.content .choose_date .date_right .right_content .content_date .date_info .info_left h1 {
+  color: #FE538B;
+  font-size: 30px;
+}
+.content .choose_date .date_right .right_content .content_date .date_info .info_right {
+  width: 200px;
+  height: 78px;
+  float: right;
+}
+.content .choose_date .date_right .right_content .content_date .date_info .info_right p {
+  float: right;
+  font-size: 20px;
+}
+.content .choose_date .date_right .right_content .content_date .date_info .info_right .info_time {
+  float: right;
+  color: #FE538B;
+  font-size: 85px;
+  margin-top: -10px;
+}
+.content .choose_date .date_right .right_content .content_date .date_info .info_right span {
+  font-size: 16px;
+  float: left;
+  margin-top: 50px;
+}
+.content .choose_date .date_right .right_content .content_date:hover {
+  background: #E5E5E5;
+}
+.content .choose_date .date_right .right_content .right_icon_1 {
+  position: absolute;
+  left: 42px;
+  width: 10px;
+  height: 28px;
+  top: 15px;
+  background: url(../img/calendar_icon.png) no-repeat;
+}
+.content .choose_date .date_right .right_content .right_icon_2 {
+  position: absolute;
+  right: 42px;
+  width: 10px;
+  height: 28px;
+  top: 15px;
+  background: url(../img/calendar_icon.png) no-repeat;
+}
+.content .service {
+  width: 1200px;
+  height: 290px;
+  border: 1px solid #eee2d7;
+  margin-top: 15px;
+  margin-bottom: 40px;
+  background: #fff;
+}
+.content .service .service_left {
+  float: left;
+  width: 900px;
+  height: 250px;
+  margin-top: 20px;
+}
+.content .service .service_left p {
+  margin-left: 40px;
+  font-size: 16px;
+}
+.content .service .service_left ul {
+  width: 100%;
+  height: 260px;
+  margin-top: 20px;
+}
+.content .service .service_left ul li {
+  width: 298px;
+  height: 190px;
+  position: relative;
+  border-right: 1px dashed #f2efe9;
+  float: left;
+}
+.content .service .service_left ul li a div {
+  width: 120px;
+  height: 120px;
+  margin: 20px auto;
+}
+.content .service .service_left ul li a .order_img {
+  background: url(../img/cart.png) no-repeat;
+}
+.content .service .service_left ul li a .vouchers {
+  height: 100px;
+  margin-top: 40px;
+  background: url(../img/ticket.png) no-repeat;
+}
+.content .service .service_left ul li a .reward {
+  background: url(../img/flower.png) no-repeat;
+}
+.content .service .service_left ul li span {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: 18px;
+  text-align: center;
+  color: #3c3c3c;
+}
+.content .service .service_right {
+  float: right;
+  margin-top: 20px;
+  width: 248px;
+  height: 250px;
+  margin-right: 30px;
+}
+.content .service .service_right .activity {
+  font-size: 16px;
+}
+.content .service .service_right ul {
+  width: 100%;
+  height: 201px;
+  margin-top: 20px;
+}
+.content .service .service_right ul li {
+  width: 100%;
+  height: 90px;
+  border-bottom: 1px dashed #f2efe9;
+}
+.content .service .service_right ul li > div {
+  width: 60px;
+  height: 60px;
+  margin-top: 5px;
+  display: inline-block;
+}
+.content .service .service_right ul li .activity_img1 {
+  background: url(../img/dream.png) no-repeat;
+}
+.content .service .service_right ul li .activity_img2 {
+  background: url(../img/activeImg1.png) no-repeat;
+}
+.content .service .service_right ul li a div {
+  width: 165px;
+  margin-top: 5px;
+  float: right;
+  display: inline-block;
+  vertical-align: baseline;
+}
+.content .service .service_right ul li a div .para1 {
+  font-size: 14px;
+  color: #777;
+  line-height: 20px;
+}
+.content .service .service_right ul li a div .para2 {
+  font-size: 12px;
+  color: #ddd;
+  margin-top: 5px;
+}
+.content .service .service_right ul li a div .para2 span {
+  color: #fe538b;
+}

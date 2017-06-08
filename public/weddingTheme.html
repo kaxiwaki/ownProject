@@ -1,0 +1,1635 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-ch">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/mainStyle.css"/>
+    <link rel="stylesheet" href="css/footer.css"/>
+    <link rel="stylesheet" href="css/header.css"/>
+    <link rel="stylesheet" href="css/animate.css"/>
+    <link rel="stylesheet" href="css/theme.css"/>
+    <title></title>
+</head>
+<body>
+    <!-- 页面头部 -->
+    <div id="header"></div>
+    <!-- banner -->
+    <div id="banner">
+        <div id="bg1">
+            <div id="bg2">
+                <div id="banner-left">
+                </div>
+                <div id="banner-right">
+                </div>
+            </div>
+        </div>
+        <!-- banner 模态框 -->
+        <div id="model">
+            <div id="order">
+                <table></table>
+                <div id="m1" class="choose-parent">
+                    <!-- 第一个 -->
+                    <div class="model-plan-choose-changjing">
+                        <div class="model-select-plan-changjing">
+                            <p>请选择婚礼场景</p>
+                            <b></b>
+                        </div>
+                        <div class="model-hidden-choose-changjing">
+                            <ul>
+                                <li>酒店婚礼</li>
+                                <li>会馆婚礼</li>
+                                <li>草坪婚礼</li>
+                                <li>沙滩婚礼</li>
+                                <li>大棚婚礼</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 第二个 -->
+                    <div class="model-plan-choose-style">
+                        <div class="model-select-plan-style">
+                            <p>请选择婚礼风格</p>
+                            <b></b>
+                        </div>
+                        <div class="model-hidden-choose-style">
+                            <ul>
+                                <li>欧式婚礼</li>
+                                <li>中式婚礼</li>
+                                <li>童话婚礼</li>
+                                <li>动漫婚礼</li>
+                                <li>武侠婚礼</li>
+                                <li>创意婚礼</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 第三个 -->
+                    <div class="model-plan-choose-money">
+                        <div class="model-select-plan-money">
+                            <p>请选择婚礼预算</p>
+                            <b></b>
+                        </div>
+                        <div class="model-hidden-choose-money">
+                            <ul>
+                                <li>2000-5000元</li>
+                                <li>5000-8000元</li>
+                                <li>8000-15000元</li>
+                                <li>15000-20000元</li>
+                                <li>20000-30000元</li>
+                                <li>30000元以上</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="m2" class="phone hidden">
+                    <form action="#">
+                        <input type="text" placeholder="填写手机号"/>
+                        <input type="text" placeholder="输入验证码"/>
+                        <button>发送验证码</button>
+                    </form>
+                </div>
+                <button>还差一步</button>
+                <p>今日已有人预约策划</p>
+                <div class="close"></div>
+            </div>
+            <div id="girl" class="hidden">
+                <div class="pic-girl">
+                    <img src="imgs/girl.gif" alt=""/>
+                </div>
+                <h1>我们的婚礼策划是免费的喔，给我个机会吧</h1>
+                <p>专业婚礼策划师会根据您预算精心设计婚礼方案，满意为止！</p>
+                <button>我要婚礼策划</button>
+                <button>取消</button>
+            </div>
+        </div>
+    </div>
+    <!-- 导航 -->
+    <nav id="nav">
+        <div id="nav-parents">
+            <div id="w-style">婚礼风格:
+                <b>欧式</b>
+                <b>中式</b>
+                <b>海洋</b>
+                <b>星空</b>
+                <b>森林</b>
+                <b>童话</b>
+                <b>动漫</b>
+                <b>校园</b>
+                <b>电影</b>
+                <b>复古</b>
+                <b>草坪</b>
+                <b>清新</b>
+                <b>游艇</b>
+                <b>水上平台</b>
+                <b>怀旧</b>
+                <b>搞怪</b>
+            </div>
+            <div id="w-color">主题颜色:
+                <div><b class="c8"></b></div>
+                <div><b class="c7"></b></div>
+                <div><b class="c6"></b></div>
+                <div><b class="c5"></b></div>
+                <div><b class="c4"></b></div>
+                <div><b class="c3"></b></div>
+                <div><b class="c2"></b></div>
+                <div class="currentcolor"><b class="c1"></b></div>
+            </div>
+            <div id="w-price">选择价格:
+                <b class="current">全部</b>
+                <b>6000元以下</b>
+                <b>6000~8000元</b>
+                <b>8000~10000元</b>
+                <b>10000~12000元</b>
+                <b>10000~15000元</b>
+                <b>15000~20000元</b>
+                <b>20000元以上</b>
+            </div>
+            <div id="w-sort">
+                <b class="pre current">综合排序</b>
+                <b class="pre">最新</b>
+                <b class="pre">喜欢</b>
+                <b class="pre">价格</b>
+                <div class="right">
+                    <form action="#">
+                        <label for="input-left">价格</label>
+                        <input type="text" id="input-left"/>
+                        <span>—</span>
+                        <input type="text"/>
+                        <input type="button" value="确定"/>
+                    </form>
+                </div>
+                <div class="qiehuan">
+                    <div class="right huise2"></div>
+                    <div class="hongse1"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- 页面主体 -->
+    <section id="main">
+        <div id="ul-parent" class="show">
+            <ul id="main-list">
+                <li>
+                    <a href="#">
+                        <!-- 图片 -->
+                        <div class="list-img">
+                            <img src="imgs/001.jpg" alt=""/>
+                        </div>
+                        <!-- 图片上文字 -->
+                        <div class="img-text">
+
+                        </div>
+                        <!-- 文字 -->
+                        <div class="list-text">
+                            <h4>宫廷皇家奢华淡雅绿宝石</h4>
+                            <p>柔美清新的色调 带来不一样的诱惑 同时象征生命的绿色比其他颜色更有着活力感</p>
+                            <ul class="plzan">
+                                <li><span>13</span></li>
+                                <li><span>389</span></li>
+                            </ul>
+                            <div class="list-price">¥ 8820~18820</div>
+                        </div>
+                        <!-- 隐藏 -->
+                        <div class="list-hidden">
+                            <ul>
+                                <li>
+                                    <b class="head"></b>
+                                    <span>醒目兑水2015-10-25</span>
+                                    <p>当时在婚博会上定下的，感觉还不错~找婚庆就是比较省心，对方会帮忙解决化妆、摄影等问题。</p>
+                                </li>
+                                <li>
+                                    <b class="head"></b>
+                                    <span>娜小娜2017-3-12</span>
+                                    <p>前两天的婚礼，是婚聚网的策划。策划师张璇非常的细心负责，整个婚礼尽然有序。感觉非常棒</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <!-- 图片 -->
+                        <div class="list-img">
+                            <img src="imgs/002.jpg" alt=""/>
+                        </div>
+                        <!-- 图片上文字 -->
+                        <div class="img-text">
+
+                        </div>
+                        <!-- 文字 -->
+                        <div class="list-text">
+                            <h4>宫廷皇家奢华淡雅绿宝石</h4>
+                            <p>柔美清新的色调 带来不一样的诱惑 同时象征生命的绿色比其他颜色更有着活力感</p>
+                            <ul class="plzan">
+                                <li><span>13</span></li>
+                                <li><span>389</span></li>
+                            </ul>
+                            <div class="list-price">¥ 8820~18820</div>
+                        </div>
+                        <!-- 隐藏 -->
+                        <div class="list-hidden">
+                            <ul>
+                                <li>
+                                    <b class="head"></b>
+                                    <span>醒目兑水2015-10-25</span>
+                                    <p>当时在婚博会上定下的，感觉还不错~找婚庆就是比较省心，对方会帮忙解决化妆、摄影等问题。</p>
+                                </li>
+                                <li>
+                                    <b class="head"></b>
+                                    <span>娜小娜2017-3-12</span>
+                                    <p>前两天的婚礼，是婚聚网的策划。策划师张璇非常的细心负责，整个婚礼尽然有序。感觉非常棒</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <!-- 图片 -->
+                        <div class="list-img">
+                            <img src="imgs/003.jpg" alt=""/>
+                        </div>
+                        <!-- 图片上文字 -->
+                        <div class="img-text">
+
+                        </div>
+                        <!-- 文字 -->
+                        <div class="list-text">
+                            <h4>宫廷皇家奢华淡雅绿宝石</h4>
+                            <p>柔美清新的色调 带来不一样的诱惑 同时象征生命的绿色比其他颜色更有着活力感</p>
+                            <ul class="plzan">
+                                <li><span>13</span></li>
+                                <li><span>389</span></li>
+                            </ul>
+                            <div class="list-price">¥ 8820~18820</div>
+                        </div>
+                        <!-- 隐藏 -->
+                        <div class="list-hidden">
+                            <ul>
+                                <li>
+                                    <b class="head"></b>
+                                    <span>醒目兑水2015-10-25</span>
+                                    <p>当时在婚博会上定下的，感觉还不错~找婚庆就是比较省心，对方会帮忙解决化妆、摄影等问题。</p>
+                                </li>
+                                <li>
+                                    <b class="head"></b>
+                                    <span>娜小娜2017-3-12</span>
+                                    <p>前两天的婚礼，是婚聚网的策划。策划师张璇非常的细心负责，整个婚礼尽然有序。感觉非常棒</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <!-- 图片 -->
+                        <div class="list-img">
+                            <img src="imgs/004.jpg" alt=""/>
+                        </div>
+                        <!-- 图片上文字 -->
+                        <div class="img-text">
+
+                        </div>
+                        <!-- 文字 -->
+                        <div class="list-text">
+                            <h4>宫廷皇家奢华淡雅绿宝石</h4>
+                            <p>柔美清新的色调 带来不一样的诱惑 同时象征生命的绿色比其他颜色更有着活力感</p>
+                            <ul class="plzan">
+                                <li><span>13</span></li>
+                                <li><span>389</span></li>
+                            </ul>
+                            <div class="list-price">¥ 8820~18820</div>
+                        </div>
+                        <!-- 隐藏 -->
+                        <div class="list-hidden">
+                            <ul>
+                                <li>
+                                    <b class="head"></b>
+                                    <span>醒目兑水2015-10-25</span>
+                                    <p>当时在婚博会上定下的，感觉还不错~找婚庆就是比较省心，对方会帮忙解决化妆、摄影等问题。</p>
+                                </li>
+                                <li>
+                                    <b class="head"></b>
+                                    <span>娜小娜2017-3-12</span>
+                                    <p>前两天的婚礼，是婚聚网的策划。策划师张璇非常的细心负责，整个婚礼尽然有序。感觉非常棒</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <!-- 图片 -->
+                        <div class="list-img">
+                            <img src="imgs/005.jpg" alt=""/>
+                        </div>
+                        <!-- 图片上文字 -->
+                        <div class="img-text">
+
+                        </div>
+                        <!-- 文字 -->
+                        <div class="list-text">
+                            <h4>宫廷皇家奢华淡雅绿宝石</h4>
+                            <p>柔美清新的色调 带来不一样的诱惑 同时象征生命的绿色比其他颜色更有着活力感</p>
+                            <ul class="plzan">
+                                <li><span>13</span></li>
+                                <li><span>389</span></li>
+                            </ul>
+                            <div class="list-price">¥ 8820~18820</div>
+                        </div>
+                        <!-- 隐藏 -->
+                        <div class="list-hidden">
+                            <ul>
+                                <li>
+                                    <b class="head"></b>
+                                    <span>醒目兑水2015-10-25</span>
+                                    <p>当时在婚博会上定下的，感觉还不错~找婚庆就是比较省心，对方会帮忙解决化妆、摄影等问题。</p>
+                                </li>
+                                <li>
+                                    <b class="head"></b>
+                                    <span>娜小娜2017-3-12</span>
+                                    <p>前两天的婚礼，是婚聚网的策划。策划师张璇非常的细心负责，整个婚礼尽然有序。感觉非常棒</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <!-- 图片 -->
+                        <div class="list-img">
+                            <img src="imgs/006.jpg" alt=""/>
+                        </div>
+                        <!-- 图片上文字 -->
+                        <div class="img-text">
+
+                        </div>
+                        <!-- 文字 -->
+                        <div class="list-text">
+                            <h4>宫廷皇家奢华淡雅绿宝石</h4>
+                            <p>柔美清新的色调 带来不一样的诱惑 同时象征生命的绿色比其他颜色更有着活力感</p>
+                            <ul class="plzan">
+                                <li><span>13</span></li>
+                                <li><span>389</span></li>
+                            </ul>
+                            <div class="list-price">¥ 8820~18820</div>
+                        </div>
+                        <!-- 隐藏 -->
+                        <div class="list-hidden">
+                            <ul>
+                                <li>
+                                    <b class="head"></b>
+                                    <span>醒目兑水2015-10-25</span>
+                                    <p>当时在婚博会上定下的，感觉还不错~找婚庆就是比较省心，对方会帮忙解决化妆、摄影等问题。</p>
+                                </li>
+                                <li>
+                                    <b class="head"></b>
+                                    <span>娜小娜2017-3-12</span>
+                                    <p>前两天的婚礼，是婚聚网的策划。策划师张璇非常的细心负责，整个婚礼尽然有序。感觉非常棒</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <!-- 图片 -->
+                        <div class="list-img">
+                            <img src="imgs/007.jpg" alt=""/>
+                        </div>
+                        <!-- 图片上文字 -->
+                        <div class="img-text">
+
+                        </div>
+                        <!-- 文字 -->
+                        <div class="list-text">
+                            <h4>宫廷皇家奢华淡雅绿宝石</h4>
+                            <p>柔美清新的色调 带来不一样的诱惑 同时象征生命的绿色比其他颜色更有着活力感</p>
+                            <ul class="plzan">
+                                <li><span>13</span></li>
+                                <li><span>389</span></li>
+                            </ul>
+                            <div class="list-price">¥ 8820~18820</div>
+                        </div>
+                        <!-- 隐藏 -->
+                        <div class="list-hidden">
+                            <ul>
+                                <li>
+                                    <b class="head"></b>
+                                    <span>醒目兑水2015-10-25</span>
+                                    <p>当时在婚博会上定下的，感觉还不错~找婚庆就是比较省心，对方会帮忙解决化妆、摄影等问题。</p>
+                                </li>
+                                <li>
+                                    <b class="head"></b>
+                                    <span>娜小娜2017-3-12</span>
+                                    <p>前两天的婚礼，是婚聚网的策划。策划师张璇非常的细心负责，整个婚礼尽然有序。感觉非常棒</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <!-- 图片 -->
+                        <div class="list-img">
+                            <img src="imgs/008.jpg" alt=""/>
+                        </div>
+                        <!-- 图片上文字 -->
+                        <div class="img-text">
+
+                        </div>
+                        <!-- 文字 -->
+                        <div class="list-text">
+                            <h4>宫廷皇家奢华淡雅绿宝石</h4>
+                            <p>柔美清新的色调 带来不一样的诱惑 同时象征生命的绿色比其他颜色更有着活力感</p>
+                            <ul class="plzan">
+                                <li><span>13</span></li>
+                                <li><span>389</span></li>
+                            </ul>
+                            <div class="list-price">¥ 8820~18820</div>
+                        </div>
+                        <!-- 隐藏 -->
+                        <div class="list-hidden">
+                            <ul>
+                                <li>
+                                    <b class="head"></b>
+                                    <span>醒目兑水2015-10-25</span>
+                                    <p>当时在婚博会上定下的，感觉还不错~找婚庆就是比较省心，对方会帮忙解决化妆、摄影等问题。</p>
+                                </li>
+                                <li>
+                                    <b class="head"></b>
+                                    <span>娜小娜2017-3-12</span>
+                                    <p>前两天的婚礼，是婚聚网的策划。策划师张璇非常的细心负责，整个婚礼尽然有序。感觉非常棒</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <!-- 图片 -->
+                        <div class="list-img">
+                            <img src="imgs/009.jpg" alt=""/>
+                        </div>
+                        <!-- 图片上文字 -->
+                        <div class="img-text">
+
+                        </div>
+                        <!-- 文字 -->
+                        <div class="list-text">
+                            <h4>宫廷皇家奢华淡雅绿宝石</h4>
+                            <p>柔美清新的色调 带来不一样的诱惑 同时象征生命的绿色比其他颜色更有着活力感</p>
+                            <ul class="plzan">
+                                <li><span>13</span></li>
+                                <li><span>389</span></li>
+                            </ul>
+                            <div class="list-price">¥ 8820~18820</div>
+                        </div>
+                        <!-- 隐藏 -->
+                        <div class="list-hidden">
+                            <ul>
+                                <li>
+                                    <b class="head"></b>
+                                    <span>醒目兑水2015-10-25</span>
+                                    <p>当时在婚博会上定下的，感觉还不错~找婚庆就是比较省心，对方会帮忙解决化妆、摄影等问题。</p>
+                                </li>
+                                <li>
+                                    <b class="head"></b>
+                                    <span>娜小娜2017-3-12</span>
+                                    <p>前两天的婚礼，是婚聚网的策划。策划师张璇非常的细心负责，整个婚礼尽然有序。感觉非常棒</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <!-- 图片 -->
+                        <div class="list-img">
+                            <img src="imgs/010.jpg" alt=""/>
+                        </div>
+                        <!-- 图片上文字 -->
+                        <div class="img-text">
+
+                        </div>
+                        <!-- 文字 -->
+                        <div class="list-text">
+                            <h4>宫廷皇家奢华淡雅绿宝石</h4>
+                            <p>柔美清新的色调 带来不一样的诱惑 同时象征生命的绿色比其他颜色更有着活力感</p>
+                            <ul class="plzan">
+                                <li><span>13</span></li>
+                                <li><span>389</span></li>
+                            </ul>
+                            <div class="list-price">¥ 8820~18820</div>
+                        </div>
+                        <!-- 隐藏 -->
+                        <div class="list-hidden">
+                            <ul>
+                                <li>
+                                    <b class="head"></b>
+                                    <span>醒目兑水2015-10-25</span>
+                                    <p>当时在婚博会上定下的，感觉还不错~找婚庆就是比较省心，对方会帮忙解决化妆、摄影等问题。</p>
+                                </li>
+                                <li>
+                                    <b class="head"></b>
+                                    <span>娜小娜2017-3-12</span>
+                                    <p>前两天的婚礼，是婚聚网的策划。策划师张璇非常的细心负责，整个婚礼尽然有序。感觉非常棒</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <!-- 图片 -->
+                        <div class="list-img">
+                            <img src="imgs/011.jpg" alt=""/>
+                        </div>
+                        <!-- 图片上文字 -->
+                        <div class="img-text">
+
+                        </div>
+                        <!-- 文字 -->
+                        <div class="list-text">
+                            <h4>宫廷皇家奢华淡雅绿宝石</h4>
+                            <p>柔美清新的色调 带来不一样的诱惑 同时象征生命的绿色比其他颜色更有着活力感</p>
+                            <ul class="plzan">
+                                <li><span>13</span></li>
+                                <li><span>389</span></li>
+                            </ul>
+                            <div class="list-price">¥ 8820~18820</div>
+                        </div>
+                        <!-- 隐藏 -->
+                        <div class="list-hidden">
+                            <ul>
+                                <li>
+                                    <b class="head"></b>
+                                    <span>醒目兑水2015-10-25</span>
+                                    <p>当时在婚博会上定下的，感觉还不错~找婚庆就是比较省心，对方会帮忙解决化妆、摄影等问题。</p>
+                                </li>
+                                <li>
+                                    <b class="head"></b>
+                                    <span>娜小娜2017-3-12</span>
+                                    <p>前两天的婚礼，是婚聚网的策划。策划师张璇非常的细心负责，整个婚礼尽然有序。感觉非常棒</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <!-- 图片 -->
+                        <div class="list-img">
+                            <img src="imgs/012.jpg" alt=""/>
+                        </div>
+                        <!-- 图片上文字 -->
+                        <div class="img-text">
+
+                        </div>
+                        <!-- 文字 -->
+                        <div class="list-text">
+                            <h4>宫廷皇家奢华淡雅绿宝石</h4>
+                            <p>柔美清新的色调 带来不一样的诱惑 同时象征生命的绿色比其他颜色更有着活力感</p>
+                            <ul class="plzan">
+                                <li><span>13</span></li>
+                                <li><span>389</span></li>
+                            </ul>
+                            <div class="list-price">¥ 8820~18820</div>
+                        </div>
+                        <!-- 隐藏 -->
+                        <div class="list-hidden">
+                            <ul>
+                                <li>
+                                    <b class="head"></b>
+                                    <span>醒目兑水2015-10-25</span>
+                                    <p>当时在婚博会上定下的，感觉还不错~找婚庆就是比较省心，对方会帮忙解决化妆、摄影等问题。</p>
+                                </li>
+                                <li>
+                                    <b class="head"></b>
+                                    <span>娜小娜2017-3-12</span>
+                                    <p>前两天的婚礼，是婚聚网的策划。策划师张璇非常的细心负责，整个婚礼尽然有序。感觉非常棒</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <!-- 图片 -->
+                        <div class="list-img">
+                            <img src="imgs/013.jpg" alt=""/>
+                        </div>
+                        <!-- 图片上文字 -->
+                        <div class="img-text">
+
+                        </div>
+                        <!-- 文字 -->
+                        <div class="list-text">
+                            <h4>宫廷皇家奢华淡雅绿宝石</h4>
+                            <p>柔美清新的色调 带来不一样的诱惑 同时象征生命的绿色比其他颜色更有着活力感</p>
+                            <ul class="plzan">
+                                <li><span>13</span></li>
+                                <li><span>389</span></li>
+                            </ul>
+                            <div class="list-price">¥ 8820~18820</div>
+                        </div>
+                        <!-- 隐藏 -->
+                        <div class="list-hidden">
+                            <ul>
+                                <li>
+                                    <b class="head"></b>
+                                    <span>醒目兑水2015-10-25</span>
+                                    <p>当时在婚博会上定下的，感觉还不错~找婚庆就是比较省心，对方会帮忙解决化妆、摄影等问题。</p>
+                                </li>
+                                <li>
+                                    <b class="head"></b>
+                                    <span>娜小娜2017-3-12</span>
+                                    <p>前两天的婚礼，是婚聚网的策划。策划师张璇非常的细心负责，整个婚礼尽然有序。感觉非常棒</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <!-- 图片 -->
+                        <div class="list-img">
+                            <img src="imgs/014.jpg" alt=""/>
+                        </div>
+                        <!-- 图片上文字 -->
+                        <div class="img-text">
+
+                        </div>
+                        <!-- 文字 -->
+                        <div class="list-text">
+                            <h4>宫廷皇家奢华淡雅绿宝石</h4>
+                            <p>柔美清新的色调 带来不一样的诱惑 同时象征生命的绿色比其他颜色更有着活力感</p>
+                            <ul class="plzan">
+                                <li><span>13</span></li>
+                                <li><span>389</span></li>
+                            </ul>
+                            <div class="list-price">¥ 8820~18820</div>
+                        </div>
+                        <!-- 隐藏 -->
+                        <div class="list-hidden">
+                            <ul>
+                                <li>
+                                    <b class="head"></b>
+                                    <span>醒目兑水2015-10-25</span>
+                                    <p>当时在婚博会上定下的，感觉还不错~找婚庆就是比较省心，对方会帮忙解决化妆、摄影等问题。</p>
+                                </li>
+                                <li>
+                                    <b class="head"></b>
+                                    <span>娜小娜2017-3-12</span>
+                                    <p>前两天的婚礼，是婚聚网的策划。策划师张璇非常的细心负责，整个婚礼尽然有序。感觉非常棒</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <div id="foot-page">
+                <b class="pre">〈</b>
+                <a href="#" class="page-current">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <span>...</span>
+                <a href="#">8</a>
+                <b class="next">〉</b>
+            </div>
+            <p>婚聚网会对婚礼主题服务进行监督，确保完美的婚礼服务</p>
+        </div>
+        <div id="ul-parent2" class="hidden">
+            <ul>
+                <li>
+                    <div class="li-top clear">
+                        <div class="li-top-left">
+                            <img src="imgs/2001.png" alt=""/>
+                            <img src="imgs/2002.png" alt=""/>
+                            <img src="imgs/2003.png" alt=""/>
+                        </div>
+                        <div class="li-top-right">
+                            <div class="li-top-right-top">
+                                <h1>蒂芙尼之约</h1>
+                                <p>这场婚礼现场显得格外的清新与靓丽。一对新人在众多亲戚朋友的祝福和见证下进行了这场以Tiffany蓝为主题的清新婚礼。</p>
+                            </div>
+                            <div class="li-top-center">
+                                <b>大礼包</b>
+                                <i></i>
+                                <span>该套系已获得 3999 基础礼包，根据累计金额获得更高礼包</span>
+                            </div>
+                            <div class="li-top-right-bottom">
+                                <div class="yuanjia right">
+                                    <div class="right">
+                                        <span>20%</span>
+                                        <p>OFF</p>
+                                        <b></b>
+                                    </div>
+                                    <span>原价9504</span>
+                                    <p>¥7920</p>
+                                </div>
+                                <ul class="plzan">
+                                    <li><span>13</span></li>
+                                    <li><span>389</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="li-bottom clear">
+                        <div class="li-bottom-1">
+                            <b></b>
+                            <div class="left">
+                                <a>注定的爱情</a>
+                                <span>2016-05-29</span>
+                                <p>婚聚婚庆我要给你们说声谢谢,你们确实干事很认真，在这里我给网友们说下是什么情况；我的婚礼定的是婚聚策划公司的布置和摄像，自己请的司仪，结果婚礼当天请的那个司仪电话一直打不通，我们马上给婚聚婚庆公司打了个电话求助,这时策划师赶紧找来一个本来在休息的司仪给帮忙出,而且实力水平很高，,非常实在,所以大家要找婚庆就去婚聚网一定不会让人失望的.他们的服务真的很认真</p>
+                            </div>
+                        </div>
+                        <div class="li-bottom-1">
+                            <b></b>
+                            <div class="left">
+                                <a>注定的爱情</a>
+                                <span>2016-05-29</span>
+                                <p>婚聚婚庆我要给你们说声谢谢,你们确实干事很认真，在这里我给网友们说下是什么情况；我的婚礼定的是婚聚策划公司的布置和摄像，自己请的司仪，结果婚礼当天请的那个司仪电话一直打不通，我们马上给婚聚婚庆公司打了个电话求助,这时策划师赶紧找来一个本来在休息的司仪给帮忙出,而且实力水平很高，,非常实在,所以大家要找婚庆就去婚聚网一定不会让人失望的.他们的服务真的很认真</p>
+                            </div>
+                        </div>
+                        <div class="li-bottom-1">
+                            <b></b>
+                            <div class="left">
+                                <a>注定的爱情</a>
+                                <span>2016-05-29</span>
+                                <p>婚聚婚庆我要给你们说声谢谢,你们确实干事很认真，在这里我给网友们说下是什么情况；我的婚礼定的是婚聚策划公司的布置和摄像，自己请的司仪，结果婚礼当天请的那个司仪电话一直打不通，我们马上给婚聚婚庆公司打了个电话求助,这时策划师赶紧找来一个本来在休息的司仪给帮忙出,而且实力水平很高，,非常实在,所以大家要找婚庆就去婚聚网一定不会让人失望的.他们的服务真的很认真</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- li之间的虚线 -->
+                    <div class="xuxian"></div>
+                </li>
+                <li>
+                    <div class="li-top clear">
+                        <div class="li-top-left">
+                            <img src="imgs/2001.png" alt=""/>
+                            <img src="imgs/2002.png" alt=""/>
+                            <img src="imgs/2003.png" alt=""/>
+                        </div>
+                        <div class="li-top-right">
+                            <div class="li-top-right-top">
+                                <h1>蒂芙尼之约</h1>
+                                <p>这场婚礼现场显得格外的清新与靓丽。一对新人在众多亲戚朋友的祝福和见证下进行了这场以Tiffany蓝为主题的清新婚礼。</p>
+                            </div>
+                            <div class="li-top-center">
+                                <b>大礼包</b>
+                                <i></i>
+                                <span>该套系已获得 3999 基础礼包，根据累计金额获得更高礼包</span>
+                            </div>
+                            <div class="li-top-right-bottom">
+                                <div class="yuanjia right">
+                                    <div class="right">
+                                        <span>20%</span>
+                                        <p>OFF</p>
+                                        <b></b>
+                                    </div>
+                                    <span>原价9504</span>
+                                    <p>¥7920</p>
+                                </div>
+                                <ul class="plzan">
+                                    <li><span>13</span></li>
+                                    <li><span>389</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="li-bottom clear">
+                        <div class="li-bottom-1">
+                            <b></b>
+                            <div class="left">
+                                <a>注定的爱情</a>
+                                <span>2016-05-29</span>
+                                <p>婚聚婚庆我要给你们说声谢谢,你们确实干事很认真，在这里我给网友们说下是什么情况；我的婚礼定的是婚聚策划公司的布置和摄像，自己请的司仪，结果婚礼当天请的那个司仪电话一直打不通，我们马上给婚聚婚庆公司打了个电话求助,这时策划师赶紧找来一个本来在休息的司仪给帮忙出,而且实力水平很高，,非常实在,所以大家要找婚庆就去婚聚网一定不会让人失望的.他们的服务真的很认真</p>
+                            </div>
+                        </div>
+                        <div class="li-bottom-1">
+                            <b></b>
+                            <div class="left">
+                                <a>注定的爱情</a>
+                                <span>2016-05-29</span>
+                                <p>婚聚婚庆我要给你们说声谢谢,你们确实干事很认真，在这里我给网友们说下是什么情况；我的婚礼定的是婚聚策划公司的布置和摄像，自己请的司仪，结果婚礼当天请的那个司仪电话一直打不通，我们马上给婚聚婚庆公司打了个电话求助,这时策划师赶紧找来一个本来在休息的司仪给帮忙出,而且实力水平很高，,非常实在,所以大家要找婚庆就去婚聚网一定不会让人失望的.他们的服务真的很认真</p>
+                            </div>
+                        </div>
+                        <div class="li-bottom-1">
+                            <b></b>
+                            <div class="left">
+                                <a>注定的爱情</a>
+                                <span>2016-05-29</span>
+                                <p>婚聚婚庆我要给你们说声谢谢,你们确实干事很认真，在这里我给网友们说下是什么情况；我的婚礼定的是婚聚策划公司的布置和摄像，自己请的司仪，结果婚礼当天请的那个司仪电话一直打不通，我们马上给婚聚婚庆公司打了个电话求助,这时策划师赶紧找来一个本来在休息的司仪给帮忙出,而且实力水平很高，,非常实在,所以大家要找婚庆就去婚聚网一定不会让人失望的.他们的服务真的很认真</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- li之间的虚线 -->
+                    <div class="xuxian"></div>
+                </li>
+                <li>
+                    <div class="li-top clear">
+                        <div class="li-top-left">
+                            <img src="imgs/2001.png" alt=""/>
+                            <img src="imgs/2002.png" alt=""/>
+                            <img src="imgs/2003.png" alt=""/>
+                        </div>
+                        <div class="li-top-right">
+                            <div class="li-top-right-top">
+                                <h1>蒂芙尼之约</h1>
+                                <p>这场婚礼现场显得格外的清新与靓丽。一对新人在众多亲戚朋友的祝福和见证下进行了这场以Tiffany蓝为主题的清新婚礼。</p>
+                            </div>
+                            <div class="li-top-center">
+                                <b>大礼包</b>
+                                <i></i>
+                                <span>该套系已获得 3999 基础礼包，根据累计金额获得更高礼包</span>
+                            </div>
+                            <div class="li-top-right-bottom">
+                                <div class="yuanjia right">
+                                    <div class="right">
+                                        <span>20%</span>
+                                        <p>OFF</p>
+                                        <b></b>
+                                    </div>
+                                    <span>原价9504</span>
+                                    <p>¥7920</p>
+                                </div>
+                                <ul class="plzan">
+                                    <li><span>13</span></li>
+                                    <li><span>389</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="li-bottom clear">
+                        <div class="li-bottom-1">
+                            <b></b>
+                            <div class="left">
+                                <a>注定的爱情</a>
+                                <span>2016-05-29</span>
+                                <p>婚聚婚庆我要给你们说声谢谢,你们确实干事很认真，在这里我给网友们说下是什么情况；我的婚礼定的是婚聚策划公司的布置和摄像，自己请的司仪，结果婚礼当天请的那个司仪电话一直打不通，我们马上给婚聚婚庆公司打了个电话求助,这时策划师赶紧找来一个本来在休息的司仪给帮忙出,而且实力水平很高，,非常实在,所以大家要找婚庆就去婚聚网一定不会让人失望的.他们的服务真的很认真</p>
+                            </div>
+                        </div>
+                        <div class="li-bottom-1">
+                            <b></b>
+                            <div class="left">
+                                <a>注定的爱情</a>
+                                <span>2016-05-29</span>
+                                <p>婚聚婚庆我要给你们说声谢谢,你们确实干事很认真，在这里我给网友们说下是什么情况；我的婚礼定的是婚聚策划公司的布置和摄像，自己请的司仪，结果婚礼当天请的那个司仪电话一直打不通，我们马上给婚聚婚庆公司打了个电话求助,这时策划师赶紧找来一个本来在休息的司仪给帮忙出,而且实力水平很高，,非常实在,所以大家要找婚庆就去婚聚网一定不会让人失望的.他们的服务真的很认真</p>
+                            </div>
+                        </div>
+                        <div class="li-bottom-1">
+                            <b></b>
+                            <div class="left">
+                                <a>注定的爱情</a>
+                                <span>2016-05-29</span>
+                                <p>婚聚婚庆我要给你们说声谢谢,你们确实干事很认真，在这里我给网友们说下是什么情况；我的婚礼定的是婚聚策划公司的布置和摄像，自己请的司仪，结果婚礼当天请的那个司仪电话一直打不通，我们马上给婚聚婚庆公司打了个电话求助,这时策划师赶紧找来一个本来在休息的司仪给帮忙出,而且实力水平很高，,非常实在,所以大家要找婚庆就去婚聚网一定不会让人失望的.他们的服务真的很认真</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- li之间的虚线 -->
+                    <div class="xuxian"></div>
+                </li>
+                <li>
+                    <div class="li-top clear">
+                        <div class="li-top-left">
+                            <img src="imgs/2001.png" alt=""/>
+                            <img src="imgs/2002.png" alt=""/>
+                            <img src="imgs/2003.png" alt=""/>
+                        </div>
+                        <div class="li-top-right">
+                            <div class="li-top-right-top">
+                                <h1>蒂芙尼之约</h1>
+                                <p>这场婚礼现场显得格外的清新与靓丽。一对新人在众多亲戚朋友的祝福和见证下进行了这场以Tiffany蓝为主题的清新婚礼。</p>
+                            </div>
+                            <div class="li-top-center">
+                                <b>大礼包</b>
+                                <i></i>
+                                <span>该套系已获得 3999 基础礼包，根据累计金额获得更高礼包</span>
+                            </div>
+                            <div class="li-top-right-bottom">
+                                <div class="yuanjia right">
+                                    <div class="right">
+                                        <span>20%</span>
+                                        <p>OFF</p>
+                                        <b></b>
+                                    </div>
+                                    <span>原价9504</span>
+                                    <p>¥7920</p>
+                                </div>
+                                <ul class="plzan">
+                                    <li><span>13</span></li>
+                                    <li><span>389</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="li-bottom clear">
+                        <div class="li-bottom-1">
+                            <b></b>
+                            <div class="left">
+                                <a>注定的爱情</a>
+                                <span>2016-05-29</span>
+                                <p>婚聚婚庆我要给你们说声谢谢,你们确实干事很认真，在这里我给网友们说下是什么情况；我的婚礼定的是婚聚策划公司的布置和摄像，自己请的司仪，结果婚礼当天请的那个司仪电话一直打不通，我们马上给婚聚婚庆公司打了个电话求助,这时策划师赶紧找来一个本来在休息的司仪给帮忙出,而且实力水平很高，,非常实在,所以大家要找婚庆就去婚聚网一定不会让人失望的.他们的服务真的很认真</p>
+                            </div>
+                        </div>
+                        <div class="li-bottom-1">
+                            <b></b>
+                            <div class="left">
+                                <a>注定的爱情</a>
+                                <span>2016-05-29</span>
+                                <p>婚聚婚庆我要给你们说声谢谢,你们确实干事很认真，在这里我给网友们说下是什么情况；我的婚礼定的是婚聚策划公司的布置和摄像，自己请的司仪，结果婚礼当天请的那个司仪电话一直打不通，我们马上给婚聚婚庆公司打了个电话求助,这时策划师赶紧找来一个本来在休息的司仪给帮忙出,而且实力水平很高，,非常实在,所以大家要找婚庆就去婚聚网一定不会让人失望的.他们的服务真的很认真</p>
+                            </div>
+                        </div>
+                        <div class="li-bottom-1">
+                            <b></b>
+                            <div class="left">
+                                <a>注定的爱情</a>
+                                <span>2016-05-29</span>
+                                <p>婚聚婚庆我要给你们说声谢谢,你们确实干事很认真，在这里我给网友们说下是什么情况；我的婚礼定的是婚聚策划公司的布置和摄像，自己请的司仪，结果婚礼当天请的那个司仪电话一直打不通，我们马上给婚聚婚庆公司打了个电话求助,这时策划师赶紧找来一个本来在休息的司仪给帮忙出,而且实力水平很高，,非常实在,所以大家要找婚庆就去婚聚网一定不会让人失望的.他们的服务真的很认真</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- li之间的虚线 -->
+                    <div class="xuxian"></div>
+                </li>
+                <li>
+                    <div class="li-top clear">
+                        <div class="li-top-left">
+                            <img src="imgs/2001.png" alt=""/>
+                            <img src="imgs/2002.png" alt=""/>
+                            <img src="imgs/2003.png" alt=""/>
+                        </div>
+                        <div class="li-top-right">
+                            <div class="li-top-right-top">
+                                <h1>蒂芙尼之约</h1>
+                                <p>这场婚礼现场显得格外的清新与靓丽。一对新人在众多亲戚朋友的祝福和见证下进行了这场以Tiffany蓝为主题的清新婚礼。</p>
+                            </div>
+                            <div class="li-top-center">
+                                <b>大礼包</b>
+                                <i></i>
+                                <span>该套系已获得 3999 基础礼包，根据累计金额获得更高礼包</span>
+                            </div>
+                            <div class="li-top-right-bottom">
+                                <div class="yuanjia right">
+                                    <div class="right">
+                                        <span>20%</span>
+                                        <p>OFF</p>
+                                        <b></b>
+                                    </div>
+                                    <span>原价9504</span>
+                                    <p>¥7920</p>
+                                </div>
+                                <ul class="plzan">
+                                    <li><span>13</span></li>
+                                    <li><span>389</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="li-bottom clear">
+                        <div class="li-bottom-1">
+                            <b></b>
+                            <div class="left">
+                                <a>注定的爱情</a>
+                                <span>2016-05-29</span>
+                                <p>婚聚婚庆我要给你们说声谢谢,你们确实干事很认真，在这里我给网友们说下是什么情况；我的婚礼定的是婚聚策划公司的布置和摄像，自己请的司仪，结果婚礼当天请的那个司仪电话一直打不通，我们马上给婚聚婚庆公司打了个电话求助,这时策划师赶紧找来一个本来在休息的司仪给帮忙出,而且实力水平很高，,非常实在,所以大家要找婚庆就去婚聚网一定不会让人失望的.他们的服务真的很认真</p>
+                            </div>
+                        </div>
+                        <div class="li-bottom-1">
+                            <b></b>
+                            <div class="left">
+                                <a>注定的爱情</a>
+                                <span>2016-05-29</span>
+                                <p>婚聚婚庆我要给你们说声谢谢,你们确实干事很认真，在这里我给网友们说下是什么情况；我的婚礼定的是婚聚策划公司的布置和摄像，自己请的司仪，结果婚礼当天请的那个司仪电话一直打不通，我们马上给婚聚婚庆公司打了个电话求助,这时策划师赶紧找来一个本来在休息的司仪给帮忙出,而且实力水平很高，,非常实在,所以大家要找婚庆就去婚聚网一定不会让人失望的.他们的服务真的很认真</p>
+                            </div>
+                        </div>
+                        <div class="li-bottom-1">
+                            <b></b>
+                            <div class="left">
+                                <a>注定的爱情</a>
+                                <span>2016-05-29</span>
+                                <p>婚聚婚庆我要给你们说声谢谢,你们确实干事很认真，在这里我给网友们说下是什么情况；我的婚礼定的是婚聚策划公司的布置和摄像，自己请的司仪，结果婚礼当天请的那个司仪电话一直打不通，我们马上给婚聚婚庆公司打了个电话求助,这时策划师赶紧找来一个本来在休息的司仪给帮忙出,而且实力水平很高，,非常实在,所以大家要找婚庆就去婚聚网一定不会让人失望的.他们的服务真的很认真</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- li之间的虚线 -->
+                    <div class="xuxian"></div>
+                </li>
+                <li>
+                    <div class="li-top clear">
+                        <div class="li-top-left">
+                            <img src="imgs/2001.png" alt=""/>
+                            <img src="imgs/2002.png" alt=""/>
+                            <img src="imgs/2003.png" alt=""/>
+                        </div>
+                        <div class="li-top-right">
+                            <div class="li-top-right-top">
+                                <h1>蒂芙尼之约</h1>
+                                <p>这场婚礼现场显得格外的清新与靓丽。一对新人在众多亲戚朋友的祝福和见证下进行了这场以Tiffany蓝为主题的清新婚礼。</p>
+                            </div>
+                            <div class="li-top-center">
+                                <b>大礼包</b>
+                                <i></i>
+                                <span>该套系已获得 3999 基础礼包，根据累计金额获得更高礼包</span>
+                            </div>
+                            <div class="li-top-right-bottom">
+                                <div class="yuanjia right">
+                                    <div class="right">
+                                        <span>20%</span>
+                                        <p>OFF</p>
+                                        <b></b>
+                                    </div>
+                                    <span>原价9504</span>
+                                    <p>¥7920</p>
+                                </div>
+                                <ul class="plzan">
+                                    <li><span>13</span></li>
+                                    <li><span>389</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="li-bottom clear">
+                        <div class="li-bottom-1">
+                            <b></b>
+                            <div class="left">
+                                <a>注定的爱情</a>
+                                <span>2016-05-29</span>
+                                <p>婚聚婚庆我要给你们说声谢谢,你们确实干事很认真，在这里我给网友们说下是什么情况；我的婚礼定的是婚聚策划公司的布置和摄像，自己请的司仪，结果婚礼当天请的那个司仪电话一直打不通，我们马上给婚聚婚庆公司打了个电话求助,这时策划师赶紧找来一个本来在休息的司仪给帮忙出,而且实力水平很高，,非常实在,所以大家要找婚庆就去婚聚网一定不会让人失望的.他们的服务真的很认真</p>
+                            </div>
+                        </div>
+                        <div class="li-bottom-1">
+                            <b></b>
+                            <div class="left">
+                                <a>注定的爱情</a>
+                                <span>2016-05-29</span>
+                                <p>婚聚婚庆我要给你们说声谢谢,你们确实干事很认真，在这里我给网友们说下是什么情况；我的婚礼定的是婚聚策划公司的布置和摄像，自己请的司仪，结果婚礼当天请的那个司仪电话一直打不通，我们马上给婚聚婚庆公司打了个电话求助,这时策划师赶紧找来一个本来在休息的司仪给帮忙出,而且实力水平很高，,非常实在,所以大家要找婚庆就去婚聚网一定不会让人失望的.他们的服务真的很认真</p>
+                            </div>
+                        </div>
+                        <div class="li-bottom-1">
+                            <b></b>
+                            <div class="left">
+                                <a>注定的爱情</a>
+                                <span>2016-05-29</span>
+                                <p>婚聚婚庆我要给你们说声谢谢,你们确实干事很认真，在这里我给网友们说下是什么情况；我的婚礼定的是婚聚策划公司的布置和摄像，自己请的司仪，结果婚礼当天请的那个司仪电话一直打不通，我们马上给婚聚婚庆公司打了个电话求助,这时策划师赶紧找来一个本来在休息的司仪给帮忙出,而且实力水平很高，,非常实在,所以大家要找婚庆就去婚聚网一定不会让人失望的.他们的服务真的很认真</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- li之间的虚线 -->
+                    <div class="xuxian"></div>
+                </li>
+                <li>
+                    <div class="li-top clear">
+                        <div class="li-top-left">
+                            <img src="imgs/2001.png" alt=""/>
+                            <img src="imgs/2002.png" alt=""/>
+                            <img src="imgs/2003.png" alt=""/>
+                        </div>
+                        <div class="li-top-right">
+                            <div class="li-top-right-top">
+                                <h1>蒂芙尼之约</h1>
+                                <p>这场婚礼现场显得格外的清新与靓丽。一对新人在众多亲戚朋友的祝福和见证下进行了这场以Tiffany蓝为主题的清新婚礼。</p>
+                            </div>
+                            <div class="li-top-center">
+                                <b>大礼包</b>
+                                <i></i>
+                                <span>该套系已获得 3999 基础礼包，根据累计金额获得更高礼包</span>
+                            </div>
+                            <div class="li-top-right-bottom">
+                                <div class="yuanjia right">
+                                    <div class="right">
+                                        <span>20%</span>
+                                        <p>OFF</p>
+                                        <b></b>
+                                    </div>
+                                    <span>原价9504</span>
+                                    <p>¥7920</p>
+                                </div>
+                                <ul class="plzan">
+                                    <li><span>13</span></li>
+                                    <li><span>389</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="li-bottom clear">
+                        <div class="li-bottom-1">
+                            <b></b>
+                            <div class="left">
+                                <a>注定的爱情</a>
+                                <span>2016-05-29</span>
+                                <p>婚聚婚庆我要给你们说声谢谢,你们确实干事很认真，在这里我给网友们说下是什么情况；我的婚礼定的是婚聚策划公司的布置和摄像，自己请的司仪，结果婚礼当天请的那个司仪电话一直打不通，我们马上给婚聚婚庆公司打了个电话求助,这时策划师赶紧找来一个本来在休息的司仪给帮忙出,而且实力水平很高，,非常实在,所以大家要找婚庆就去婚聚网一定不会让人失望的.他们的服务真的很认真</p>
+                            </div>
+                        </div>
+                        <div class="li-bottom-1">
+                            <b></b>
+                            <div class="left">
+                                <a>注定的爱情</a>
+                                <span>2016-05-29</span>
+                                <p>婚聚婚庆我要给你们说声谢谢,你们确实干事很认真，在这里我给网友们说下是什么情况；我的婚礼定的是婚聚策划公司的布置和摄像，自己请的司仪，结果婚礼当天请的那个司仪电话一直打不通，我们马上给婚聚婚庆公司打了个电话求助,这时策划师赶紧找来一个本来在休息的司仪给帮忙出,而且实力水平很高，,非常实在,所以大家要找婚庆就去婚聚网一定不会让人失望的.他们的服务真的很认真</p>
+                            </div>
+                        </div>
+                        <div class="li-bottom-1">
+                            <b></b>
+                            <div class="left">
+                                <a>注定的爱情</a>
+                                <span>2016-05-29</span>
+                                <p>婚聚婚庆我要给你们说声谢谢,你们确实干事很认真，在这里我给网友们说下是什么情况；我的婚礼定的是婚聚策划公司的布置和摄像，自己请的司仪，结果婚礼当天请的那个司仪电话一直打不通，我们马上给婚聚婚庆公司打了个电话求助,这时策划师赶紧找来一个本来在休息的司仪给帮忙出,而且实力水平很高，,非常实在,所以大家要找婚庆就去婚聚网一定不会让人失望的.他们的服务真的很认真</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- li之间的虚线 -->
+                    <div class="xuxian"></div>
+                </li>
+                <li>
+                    <div class="li-top clear">
+                        <div class="li-top-left">
+                            <img src="imgs/2001.png" alt=""/>
+                            <img src="imgs/2002.png" alt=""/>
+                            <img src="imgs/2003.png" alt=""/>
+                        </div>
+                        <div class="li-top-right">
+                            <div class="li-top-right-top">
+                                <h1>蒂芙尼之约</h1>
+                                <p>这场婚礼现场显得格外的清新与靓丽。一对新人在众多亲戚朋友的祝福和见证下进行了这场以Tiffany蓝为主题的清新婚礼。</p>
+                            </div>
+                            <div class="li-top-center">
+                                <b>大礼包</b>
+                                <i></i>
+                                <span>该套系已获得 3999 基础礼包，根据累计金额获得更高礼包</span>
+                            </div>
+                            <div class="li-top-right-bottom">
+                                <div class="yuanjia right">
+                                    <div class="right">
+                                        <span>20%</span>
+                                        <p>OFF</p>
+                                        <b></b>
+                                    </div>
+                                    <span>原价9504</span>
+                                    <p>¥7920</p>
+                                </div>
+                                <ul class="plzan">
+                                    <li><span>13</span></li>
+                                    <li><span>389</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="li-bottom clear">
+                        <div class="li-bottom-1">
+                            <b></b>
+                            <div class="left">
+                                <a>注定的爱情</a>
+                                <span>2016-05-29</span>
+                                <p>婚聚婚庆我要给你们说声谢谢,你们确实干事很认真，在这里我给网友们说下是什么情况；我的婚礼定的是婚聚策划公司的布置和摄像，自己请的司仪，结果婚礼当天请的那个司仪电话一直打不通，我们马上给婚聚婚庆公司打了个电话求助,这时策划师赶紧找来一个本来在休息的司仪给帮忙出,而且实力水平很高，,非常实在,所以大家要找婚庆就去婚聚网一定不会让人失望的.他们的服务真的很认真</p>
+                            </div>
+                        </div>
+                        <div class="li-bottom-1">
+                            <b></b>
+                            <div class="left">
+                                <a>注定的爱情</a>
+                                <span>2016-05-29</span>
+                                <p>婚聚婚庆我要给你们说声谢谢,你们确实干事很认真，在这里我给网友们说下是什么情况；我的婚礼定的是婚聚策划公司的布置和摄像，自己请的司仪，结果婚礼当天请的那个司仪电话一直打不通，我们马上给婚聚婚庆公司打了个电话求助,这时策划师赶紧找来一个本来在休息的司仪给帮忙出,而且实力水平很高，,非常实在,所以大家要找婚庆就去婚聚网一定不会让人失望的.他们的服务真的很认真</p>
+                            </div>
+                        </div>
+                        <div class="li-bottom-1">
+                            <b></b>
+                            <div class="left">
+                                <a>注定的爱情</a>
+                                <span>2016-05-29</span>
+                                <p>婚聚婚庆我要给你们说声谢谢,你们确实干事很认真，在这里我给网友们说下是什么情况；我的婚礼定的是婚聚策划公司的布置和摄像，自己请的司仪，结果婚礼当天请的那个司仪电话一直打不通，我们马上给婚聚婚庆公司打了个电话求助,这时策划师赶紧找来一个本来在休息的司仪给帮忙出,而且实力水平很高，,非常实在,所以大家要找婚庆就去婚聚网一定不会让人失望的.他们的服务真的很认真</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- li之间的虚线 -->
+                    <div class="xuxian"></div>
+                </li>
+                <li>
+                    <div class="li-top clear">
+                        <div class="li-top-left">
+                            <img src="imgs/2001.png" alt=""/>
+                            <img src="imgs/2002.png" alt=""/>
+                            <img src="imgs/2003.png" alt=""/>
+                        </div>
+                        <div class="li-top-right">
+                            <div class="li-top-right-top">
+                                <h1>蒂芙尼之约</h1>
+                                <p>这场婚礼现场显得格外的清新与靓丽。一对新人在众多亲戚朋友的祝福和见证下进行了这场以Tiffany蓝为主题的清新婚礼。</p>
+                            </div>
+                            <div class="li-top-center">
+                                <b>大礼包</b>
+                                <i></i>
+                                <span>该套系已获得 3999 基础礼包，根据累计金额获得更高礼包</span>
+                            </div>
+                            <div class="li-top-right-bottom">
+                                <div class="yuanjia right">
+                                    <div class="right">
+                                        <span>20%</span>
+                                        <p>OFF</p>
+                                        <b></b>
+                                    </div>
+                                    <span>原价9504</span>
+                                    <p>¥7920</p>
+                                </div>
+                                <ul class="plzan">
+                                    <li><span>13</span></li>
+                                    <li><span>389</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="li-bottom clear">
+                        <div class="li-bottom-1">
+                            <b></b>
+                            <div class="left">
+                                <a>注定的爱情</a>
+                                <span>2016-05-29</span>
+                                <p>婚聚婚庆我要给你们说声谢谢,你们确实干事很认真，在这里我给网友们说下是什么情况；我的婚礼定的是婚聚策划公司的布置和摄像，自己请的司仪，结果婚礼当天请的那个司仪电话一直打不通，我们马上给婚聚婚庆公司打了个电话求助,这时策划师赶紧找来一个本来在休息的司仪给帮忙出,而且实力水平很高，,非常实在,所以大家要找婚庆就去婚聚网一定不会让人失望的.他们的服务真的很认真</p>
+                            </div>
+                        </div>
+                        <div class="li-bottom-1">
+                            <b></b>
+                            <div class="left">
+                                <a>注定的爱情</a>
+                                <span>2016-05-29</span>
+                                <p>婚聚婚庆我要给你们说声谢谢,你们确实干事很认真，在这里我给网友们说下是什么情况；我的婚礼定的是婚聚策划公司的布置和摄像，自己请的司仪，结果婚礼当天请的那个司仪电话一直打不通，我们马上给婚聚婚庆公司打了个电话求助,这时策划师赶紧找来一个本来在休息的司仪给帮忙出,而且实力水平很高，,非常实在,所以大家要找婚庆就去婚聚网一定不会让人失望的.他们的服务真的很认真</p>
+                            </div>
+                        </div>
+                        <div class="li-bottom-1">
+                            <b></b>
+                            <div class="left">
+                                <a>注定的爱情</a>
+                                <span>2016-05-29</span>
+                                <p>婚聚婚庆我要给你们说声谢谢,你们确实干事很认真，在这里我给网友们说下是什么情况；我的婚礼定的是婚聚策划公司的布置和摄像，自己请的司仪，结果婚礼当天请的那个司仪电话一直打不通，我们马上给婚聚婚庆公司打了个电话求助,这时策划师赶紧找来一个本来在休息的司仪给帮忙出,而且实力水平很高，,非常实在,所以大家要找婚庆就去婚聚网一定不会让人失望的.他们的服务真的很认真</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- li之间的虚线 -->
+                    <div class="xuxian"></div>
+                </li>
+                <li>
+                    <div class="li-top clear">
+                        <div class="li-top-left">
+                            <img src="imgs/2001.png" alt=""/>
+                            <img src="imgs/2002.png" alt=""/>
+                            <img src="imgs/2003.png" alt=""/>
+                        </div>
+                        <div class="li-top-right">
+                            <div class="li-top-right-top">
+                                <h1>蒂芙尼之约</h1>
+                                <p>这场婚礼现场显得格外的清新与靓丽。一对新人在众多亲戚朋友的祝福和见证下进行了这场以Tiffany蓝为主题的清新婚礼。</p>
+                            </div>
+                            <div class="li-top-center">
+                                <b>大礼包</b>
+                                <i></i>
+                                <span>该套系已获得 3999 基础礼包，根据累计金额获得更高礼包</span>
+                            </div>
+                            <div class="li-top-right-bottom">
+                                <div class="yuanjia right">
+                                    <div class="right">
+                                        <span>20%</span>
+                                        <p>OFF</p>
+                                        <b></b>
+                                    </div>
+                                    <span>原价9504</span>
+                                    <p>¥7920</p>
+                                </div>
+                                <ul class="plzan">
+                                    <li><span>13</span></li>
+                                    <li><span>389</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="li-bottom clear">
+                        <div class="li-bottom-1">
+                            <b></b>
+                            <div class="left">
+                                <a>注定的爱情</a>
+                                <span>2016-05-29</span>
+                                <p>婚聚婚庆我要给你们说声谢谢,你们确实干事很认真，在这里我给网友们说下是什么情况；我的婚礼定的是婚聚策划公司的布置和摄像，自己请的司仪，结果婚礼当天请的那个司仪电话一直打不通，我们马上给婚聚婚庆公司打了个电话求助,这时策划师赶紧找来一个本来在休息的司仪给帮忙出,而且实力水平很高，,非常实在,所以大家要找婚庆就去婚聚网一定不会让人失望的.他们的服务真的很认真</p>
+                            </div>
+                        </div>
+                        <div class="li-bottom-1">
+                            <b></b>
+                            <div class="left">
+                                <a>注定的爱情</a>
+                                <span>2016-05-29</span>
+                                <p>婚聚婚庆我要给你们说声谢谢,你们确实干事很认真，在这里我给网友们说下是什么情况；我的婚礼定的是婚聚策划公司的布置和摄像，自己请的司仪，结果婚礼当天请的那个司仪电话一直打不通，我们马上给婚聚婚庆公司打了个电话求助,这时策划师赶紧找来一个本来在休息的司仪给帮忙出,而且实力水平很高，,非常实在,所以大家要找婚庆就去婚聚网一定不会让人失望的.他们的服务真的很认真</p>
+                            </div>
+                        </div>
+                        <div class="li-bottom-1">
+                            <b></b>
+                            <div class="left">
+                                <a>注定的爱情</a>
+                                <span>2016-05-29</span>
+                                <p>婚聚婚庆我要给你们说声谢谢,你们确实干事很认真，在这里我给网友们说下是什么情况；我的婚礼定的是婚聚策划公司的布置和摄像，自己请的司仪，结果婚礼当天请的那个司仪电话一直打不通，我们马上给婚聚婚庆公司打了个电话求助,这时策划师赶紧找来一个本来在休息的司仪给帮忙出,而且实力水平很高，,非常实在,所以大家要找婚庆就去婚聚网一定不会让人失望的.他们的服务真的很认真</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- li之间的虚线 -->
+                    <div class="xuxian"></div>
+                </li>
+                <li>
+                    <div class="li-top clear">
+                        <div class="li-top-left">
+                            <img src="imgs/2001.png" alt=""/>
+                            <img src="imgs/2002.png" alt=""/>
+                            <img src="imgs/2003.png" alt=""/>
+                        </div>
+                        <div class="li-top-right">
+                            <div class="li-top-right-top">
+                                <h1>蒂芙尼之约</h1>
+                                <p>这场婚礼现场显得格外的清新与靓丽。一对新人在众多亲戚朋友的祝福和见证下进行了这场以Tiffany蓝为主题的清新婚礼。</p>
+                            </div>
+                            <div class="li-top-center">
+                                <b>大礼包</b>
+                                <i></i>
+                                <span>该套系已获得 3999 基础礼包，根据累计金额获得更高礼包</span>
+                            </div>
+                            <div class="li-top-right-bottom">
+                                <div class="yuanjia right">
+                                    <div class="right">
+                                        <span>20%</span>
+                                        <p>OFF</p>
+                                        <b></b>
+                                    </div>
+                                    <span>原价9504</span>
+                                    <p>¥7920</p>
+                                </div>
+                                <ul class="plzan">
+                                    <li><span>13</span></li>
+                                    <li><span>389</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="li-bottom clear">
+                        <div class="li-bottom-1">
+                            <b></b>
+                            <div class="left">
+                                <a>注定的爱情</a>
+                                <span>2016-05-29</span>
+                                <p>婚聚婚庆我要给你们说声谢谢,你们确实干事很认真，在这里我给网友们说下是什么情况；我的婚礼定的是婚聚策划公司的布置和摄像，自己请的司仪，结果婚礼当天请的那个司仪电话一直打不通，我们马上给婚聚婚庆公司打了个电话求助,这时策划师赶紧找来一个本来在休息的司仪给帮忙出,而且实力水平很高，,非常实在,所以大家要找婚庆就去婚聚网一定不会让人失望的.他们的服务真的很认真</p>
+                            </div>
+                        </div>
+                        <div class="li-bottom-1">
+                            <b></b>
+                            <div class="left">
+                                <a>注定的爱情</a>
+                                <span>2016-05-29</span>
+                                <p>婚聚婚庆我要给你们说声谢谢,你们确实干事很认真，在这里我给网友们说下是什么情况；我的婚礼定的是婚聚策划公司的布置和摄像，自己请的司仪，结果婚礼当天请的那个司仪电话一直打不通，我们马上给婚聚婚庆公司打了个电话求助,这时策划师赶紧找来一个本来在休息的司仪给帮忙出,而且实力水平很高，,非常实在,所以大家要找婚庆就去婚聚网一定不会让人失望的.他们的服务真的很认真</p>
+                            </div>
+                        </div>
+                        <div class="li-bottom-1">
+                            <b></b>
+                            <div class="left">
+                                <a>注定的爱情</a>
+                                <span>2016-05-29</span>
+                                <p>婚聚婚庆我要给你们说声谢谢,你们确实干事很认真，在这里我给网友们说下是什么情况；我的婚礼定的是婚聚策划公司的布置和摄像，自己请的司仪，结果婚礼当天请的那个司仪电话一直打不通，我们马上给婚聚婚庆公司打了个电话求助,这时策划师赶紧找来一个本来在休息的司仪给帮忙出,而且实力水平很高，,非常实在,所以大家要找婚庆就去婚聚网一定不会让人失望的.他们的服务真的很认真</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- li之间的虚线 -->
+                    <div class="xuxian"></div>
+                </li>
+                <li>
+                    <div class="li-top clear">
+                        <div class="li-top-left">
+                            <img src="imgs/2001.png" alt=""/>
+                            <img src="imgs/2002.png" alt=""/>
+                            <img src="imgs/2003.png" alt=""/>
+                        </div>
+                        <div class="li-top-right">
+                            <div class="li-top-right-top">
+                                <h1>蒂芙尼之约</h1>
+                                <p>这场婚礼现场显得格外的清新与靓丽。一对新人在众多亲戚朋友的祝福和见证下进行了这场以Tiffany蓝为主题的清新婚礼。</p>
+                            </div>
+                            <div class="li-top-center">
+                                <b>大礼包</b>
+                                <i></i>
+                                <span>该套系已获得 3999 基础礼包，根据累计金额获得更高礼包</span>
+                            </div>
+                            <div class="li-top-right-bottom">
+                                <div class="yuanjia right">
+                                    <div class="right">
+                                        <span>20%</span>
+                                        <p>OFF</p>
+                                        <b></b>
+                                    </div>
+                                    <span>原价9504</span>
+                                    <p>¥7920</p>
+                                </div>
+                                <ul class="plzan">
+                                    <li><span>13</span></li>
+                                    <li><span>389</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="li-bottom clear">
+                        <div class="li-bottom-1">
+                            <b></b>
+                            <div class="left">
+                                <a>注定的爱情</a>
+                                <span>2016-05-29</span>
+                                <p>婚聚婚庆我要给你们说声谢谢,你们确实干事很认真，在这里我给网友们说下是什么情况；我的婚礼定的是婚聚策划公司的布置和摄像，自己请的司仪，结果婚礼当天请的那个司仪电话一直打不通，我们马上给婚聚婚庆公司打了个电话求助,这时策划师赶紧找来一个本来在休息的司仪给帮忙出,而且实力水平很高，,非常实在,所以大家要找婚庆就去婚聚网一定不会让人失望的.他们的服务真的很认真</p>
+                            </div>
+                        </div>
+                        <div class="li-bottom-1">
+                            <b></b>
+                            <div class="left">
+                                <a>注定的爱情</a>
+                                <span>2016-05-29</span>
+                                <p>婚聚婚庆我要给你们说声谢谢,你们确实干事很认真，在这里我给网友们说下是什么情况；我的婚礼定的是婚聚策划公司的布置和摄像，自己请的司仪，结果婚礼当天请的那个司仪电话一直打不通，我们马上给婚聚婚庆公司打了个电话求助,这时策划师赶紧找来一个本来在休息的司仪给帮忙出,而且实力水平很高，,非常实在,所以大家要找婚庆就去婚聚网一定不会让人失望的.他们的服务真的很认真</p>
+                            </div>
+                        </div>
+                        <div class="li-bottom-1">
+                            <b></b>
+                            <div class="left">
+                                <a>注定的爱情</a>
+                                <span>2016-05-29</span>
+                                <p>婚聚婚庆我要给你们说声谢谢,你们确实干事很认真，在这里我给网友们说下是什么情况；我的婚礼定的是婚聚策划公司的布置和摄像，自己请的司仪，结果婚礼当天请的那个司仪电话一直打不通，我们马上给婚聚婚庆公司打了个电话求助,这时策划师赶紧找来一个本来在休息的司仪给帮忙出,而且实力水平很高，,非常实在,所以大家要找婚庆就去婚聚网一定不会让人失望的.他们的服务真的很认真</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- li之间的虚线 -->
+                    <div class="xuxian"></div>
+                </li>
+                <li>
+                    <div class="li-top clear">
+                        <div class="li-top-left">
+                            <img src="imgs/2001.png" alt=""/>
+                            <img src="imgs/2002.png" alt=""/>
+                            <img src="imgs/2003.png" alt=""/>
+                        </div>
+                        <div class="li-top-right">
+                            <div class="li-top-right-top">
+                                <h1>蒂芙尼之约</h1>
+                                <p>这场婚礼现场显得格外的清新与靓丽。一对新人在众多亲戚朋友的祝福和见证下进行了这场以Tiffany蓝为主题的清新婚礼。</p>
+                            </div>
+                            <div class="li-top-center">
+                                <b>大礼包</b>
+                                <i></i>
+                                <span>该套系已获得 3999 基础礼包，根据累计金额获得更高礼包</span>
+                            </div>
+                            <div class="li-top-right-bottom">
+                                <div class="yuanjia right">
+                                    <div class="right">
+                                        <span>20%</span>
+                                        <p>OFF</p>
+                                        <b></b>
+                                    </div>
+                                    <span>原价9504</span>
+                                    <p>¥7920</p>
+                                </div>
+                                <ul class="plzan">
+                                    <li><span>13</span></li>
+                                    <li><span>389</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="li-bottom clear">
+                        <div class="li-bottom-1">
+                            <b></b>
+                            <div class="left">
+                                <a>注定的爱情</a>
+                                <span>2016-05-29</span>
+                                <p>婚聚婚庆我要给你们说声谢谢,你们确实干事很认真，在这里我给网友们说下是什么情况；我的婚礼定的是婚聚策划公司的布置和摄像，自己请的司仪，结果婚礼当天请的那个司仪电话一直打不通，我们马上给婚聚婚庆公司打了个电话求助,这时策划师赶紧找来一个本来在休息的司仪给帮忙出,而且实力水平很高，,非常实在,所以大家要找婚庆就去婚聚网一定不会让人失望的.他们的服务真的很认真</p>
+                            </div>
+                        </div>
+                        <div class="li-bottom-1">
+                            <b></b>
+                            <div class="left">
+                                <a>注定的爱情</a>
+                                <span>2016-05-29</span>
+                                <p>婚聚婚庆我要给你们说声谢谢,你们确实干事很认真，在这里我给网友们说下是什么情况；我的婚礼定的是婚聚策划公司的布置和摄像，自己请的司仪，结果婚礼当天请的那个司仪电话一直打不通，我们马上给婚聚婚庆公司打了个电话求助,这时策划师赶紧找来一个本来在休息的司仪给帮忙出,而且实力水平很高，,非常实在,所以大家要找婚庆就去婚聚网一定不会让人失望的.他们的服务真的很认真</p>
+                            </div>
+                        </div>
+                        <div class="li-bottom-1">
+                            <b></b>
+                            <div class="left">
+                                <a>注定的爱情</a>
+                                <span>2016-05-29</span>
+                                <p>婚聚婚庆我要给你们说声谢谢,你们确实干事很认真，在这里我给网友们说下是什么情况；我的婚礼定的是婚聚策划公司的布置和摄像，自己请的司仪，结果婚礼当天请的那个司仪电话一直打不通，我们马上给婚聚婚庆公司打了个电话求助,这时策划师赶紧找来一个本来在休息的司仪给帮忙出,而且实力水平很高，,非常实在,所以大家要找婚庆就去婚聚网一定不会让人失望的.他们的服务真的很认真</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- li之间的虚线 -->
+                    <div class="xuxian"></div>
+                </li>
+                <li>
+                    <div class="li-top clear">
+                        <div class="li-top-left">
+                            <img src="imgs/2001.png" alt=""/>
+                            <img src="imgs/2002.png" alt=""/>
+                            <img src="imgs/2003.png" alt=""/>
+                        </div>
+                        <div class="li-top-right">
+                            <div class="li-top-right-top">
+                                <h1>蒂芙尼之约</h1>
+                                <p>这场婚礼现场显得格外的清新与靓丽。一对新人在众多亲戚朋友的祝福和见证下进行了这场以Tiffany蓝为主题的清新婚礼。</p>
+                            </div>
+                            <div class="li-top-center">
+                                <b>大礼包</b>
+                                <i></i>
+                                <span>该套系已获得 3999 基础礼包，根据累计金额获得更高礼包</span>
+                            </div>
+                            <div class="li-top-right-bottom">
+                                <div class="yuanjia right">
+                                    <div class="right">
+                                        <span>20%</span>
+                                        <p>OFF</p>
+                                        <b></b>
+                                    </div>
+                                    <span>原价9504</span>
+                                    <p>¥7920</p>
+                                </div>
+                                <ul class="plzan">
+                                    <li><span>13</span></li>
+                                    <li><span>389</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="li-bottom clear">
+                        <div class="li-bottom-1">
+                            <b></b>
+                            <div class="left">
+                                <a>注定的爱情</a>
+                                <span>2016-05-29</span>
+                                <p>婚聚婚庆我要给你们说声谢谢,你们确实干事很认真，在这里我给网友们说下是什么情况；我的婚礼定的是婚聚策划公司的布置和摄像，自己请的司仪，结果婚礼当天请的那个司仪电话一直打不通，我们马上给婚聚婚庆公司打了个电话求助,这时策划师赶紧找来一个本来在休息的司仪给帮忙出,而且实力水平很高，,非常实在,所以大家要找婚庆就去婚聚网一定不会让人失望的.他们的服务真的很认真</p>
+                            </div>
+                        </div>
+                        <div class="li-bottom-1">
+                            <b></b>
+                            <div class="left">
+                                <a>注定的爱情</a>
+                                <span>2016-05-29</span>
+                                <p>婚聚婚庆我要给你们说声谢谢,你们确实干事很认真，在这里我给网友们说下是什么情况；我的婚礼定的是婚聚策划公司的布置和摄像，自己请的司仪，结果婚礼当天请的那个司仪电话一直打不通，我们马上给婚聚婚庆公司打了个电话求助,这时策划师赶紧找来一个本来在休息的司仪给帮忙出,而且实力水平很高，,非常实在,所以大家要找婚庆就去婚聚网一定不会让人失望的.他们的服务真的很认真</p>
+                            </div>
+                        </div>
+                        <div class="li-bottom-1">
+                            <b></b>
+                            <div class="left">
+                                <a>注定的爱情</a>
+                                <span>2016-05-29</span>
+                                <p>婚聚婚庆我要给你们说声谢谢,你们确实干事很认真，在这里我给网友们说下是什么情况；我的婚礼定的是婚聚策划公司的布置和摄像，自己请的司仪，结果婚礼当天请的那个司仪电话一直打不通，我们马上给婚聚婚庆公司打了个电话求助,这时策划师赶紧找来一个本来在休息的司仪给帮忙出,而且实力水平很高，,非常实在,所以大家要找婚庆就去婚聚网一定不会让人失望的.他们的服务真的很认真</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- li之间的虚线 -->
+                    <div class="xuxian"></div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- 页面底部 -->
+    <footer id="footer-plan">
+        <div id="plan">
+            <div class="plan-left"></div>
+            <p>婚聚网策划师会根据您的需求免费为您策划！</p>
+            <div class="plan-choose-style">
+                <div class="select-plan-style">
+                    <p>请选择婚礼风格</p>
+                    <b></b>
+                </div>
+                <div class="hidden-choose-style">
+                    <ul>
+                        <li>欧式婚礼</li>
+                        <li>中式婚礼</li>
+                        <li>童话婚礼</li>
+                        <li>动漫婚礼</li>
+                        <li>武侠婚礼</li>
+                        <li>创意婚礼</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="plan-choose-money">
+                <div class="select-plan-money">
+                    <p>请选择婚礼预算</p>
+                    <b></b>
+                </div>
+                <div class="hidden-choose-money">
+                    <ul>
+                        <li>2000-5000元</li>
+                        <li>5000-8000元</li>
+                        <li>8000-15000元</li>
+                        <li>15000-20000元</li>
+                        <li>20000-30000元</li>
+                        <li>30000元以上</li>
+                    </ul>
+                </div>
+            </div>
+            <button>让策划师免费为我设计</button>
+        </div>
+    </footer>
+    <!-- 页脚 -->
+    <div id="footer"></div>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/index.js"></script>
+<script src="js/theme.js"></script>
+</body>
+</html>

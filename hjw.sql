@@ -1,0 +1,19 @@
+SET NAMES UTF8;
+DROP DATABASE IF EXISTS hjw;
+CREATE DATABASE hjw CHARSET=UTF8;
+USE hjw;
+CREATE TABLE user(
+uid INT PRIMARY KEY AUTO_INCREMENT,
+uname VARCHAR(20),
+upwd VARCHAR(32),
+uphone VARCHAR(20)
+);
+CREATE TABLE s_product(sid INT PRIMARY KEY AUTO_INCREMENT,sname VARCHAR(64),sexp INT,slocation VARCHAR(10),skill VARCHAR(100),sprice DECIMAL(10,2),simg VARCHAR(100),limg VARCHAR(100));
+CREATE TABLE uorder(oid INT PRIMARY KEY AUTO_INCREMENT,uid INT,sid INT,otime BIGINT,opayed INT);
+INSERT INTO user VALUES(null,'唐山杰','123456','18101524873');
+
+
+INSERT INTO s_product VALUES(null,'名字',1,'北京','技能',1000.20,'小图片','大图片','小图片');
+
+
+INSERT INTO uorder VALUES(null,1,2,now(),1);

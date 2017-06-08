@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="css/usercanter.css">
+  <link rel="stylesheet" href="css/footer.css"/>
+  <link rel="stylesheet" href="css/header.css"/>
+  <link rel="stylesheet" href="css/animate.css">
+</head>
+<body>
+
+<div id="header"></div>
+<div class="header">
+  <div class="img_list">
+    <ul>
+      <li><img src="img/img_0.jpg"></li>
+      <li><img src="img/img_1.jpg"></li>
+      <li><img src="img/img_2.jpg"></li>
+      <li><img src="img/img_3.jpg"></li>
+      <li><img src="img/img_4.jpg"></li>
+      <li><img src="img/img_5.jpg"></li>
+    </ul>
+  </div>
+  <div class="date">
+    <img src="img/welcome_img.png">
+    <p>周二|晴</p>
+    <span>2017.05.16</span>
+  </div>
+</div>
+<div class="content">
+  <div class="user_name">
+    <div class="user_left">
+      <div class="left_top"></div>
+      <div class="left_bottom">
+        <div>
+          <p>
+            0.00 RMB
+          </p>
+          <h2>每日红包领取</h2>
+          <span>立即领取</span>
+        </div>
+      </div>
+      <div class="user_model">
+        <p>瓜皮</p>
+        <img class="camera" src="img/submitPhoto.png">
+        <div class="mouse"></div>
+        <div class="bj">
+          <img src="img/indivitral_photoCover.png">
+        </div>
+        <span></span>
+      </div>
+    </div>
+    <div class="user_right">
+      <div class="right_top">
+        <div class="right_top_top">
+          <span>已付款</span>
+          <p>0.00</p>
+        </div>
+        <div class="border"></div>
+        <div class="unPay_totalPay">
+          <div class="un_left">
+            <span>未结清付款</span>
+            <P>0</P>
+          </div>
+          <div class="un_right">
+            <span>总付款金额</span>
+            <p>0</p>
+          </div>
+        </div>
+      </div>
+      <div class="right_bottom">
+        <div>
+          <p>我的账户余额</p>
+          <span>立即充值</span>
+        </div>
+        <p>0RMB</p>
+      </div>
+    </div>
+  </div>
+  <div class="choose_date">
+    <div class="date_left">
+      <div class="date_left_top">
+        <ul>
+          <li class="active">01</li>
+          <li>02</li>
+          <li>03</li>
+        </ul>
+        <p><img src="img/set_icon.png"></p>
+      </div>
+      <div class="date_left_bottom">
+        <div class="isDate">
+          <span>12月</span>
+          <p class="num">09</p>
+          <p>星期六</p>
+        </div>
+        <div class="obj_content">
+          <div>
+            <p>+&nbsp;创建我的懒人婚礼</p>
+            <span>已有42242人创建</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="date_right">
+      <div class="marry">
+        <p>
+          <img src="img/set_icon.png">
+        </p>
+      </div>
+      <div class="right_content">
+        <div class="content_date">
+          <p>我的婚礼日期</p>
+          <div class="date_info">
+            <div class="info_left">
+              <span>2017</span>
+              <h1>12.09</h1>
+              <p>南京</p>
+            </div>
+            <div class="info_right">
+              <p>天</p>
+              <p class="info_time">206</p>
+              <span>还剩</span>
+            </div>
+          </div>
+        </div>
+        <div class="right_icon_1"></div>
+        <div class="right_icon_2"></div>
+      </div>
+    </div>
+  </div>
+  <div class="service">
+    <div class="service_left">
+      <p>我的服务</p>
+      <ul>
+        <li>
+          <a href="#">
+            <div class="order_img"></div>
+            <span>我的订单管理</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="vouchers"></div>
+            <span>我的婚礼抵用券</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="reward"></div>
+            <span>推荐好友奖励</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="service_right">
+      <p class="activity">最新活动</p>
+      <ul>
+        <li>
+          <div class="activity_img1"></div>
+          <a href="#">
+            <div>
+              <p class="para1">婚聚网梦想基金</p>
+              <p class="para2">
+                <span>123456</span>
+                人参与
+              </p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <div class="activity_img2"></div>
+          <a href="#">
+            <div>
+              <p class="para1">领取婚礼抵用券</p>
+              <p class="para2">
+                <span>123456</span>
+                人参与
+              </p>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/index.js"></script>
+<script>
+  $('#header').load('data/header.php');
+  $('#footer').load('data/footer.php');
+  $('.mouse').mouseenter(function () {
+    $(this).next().css('display','block');
+    $(this).css('cursor','pointer');
+  })
+  $('.mouse').mouseleave(function () {
+    $(this).next().css('display','none');
+  })
+
+</script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="css/register.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/animate.css">
+</head>
+<body>
+<div id="header"></div>
+<div class="zcContent">
+  <div class="xxx"></div>
+  <div class="zctop">
+    <div>
+      <h1>Hi,欢迎美好的你</h1>
+      <p>
+        迄今已有
+        <span>47353</span>
+        人在婚聚网成功定制自己的婚
+        <br />
+        礼 , 海量婚礼方案等你选择!
+      </p>
+    </div>
+  </div>
+  <div class="zcbd">
+    <form action="#">
+      <div class="form_right">
+        <p>选填区</p>
+        <div></div>
+        <p class="sc">上传头像</p>
+        <label for="uname">
+          <input type="text" name="uname" id="uname" value="" placeholder="输入昵称">
+        </label>
+      </div>
+      <div class="form_left">
+        <p>*必填区</p>
+        <div>
+          <div class="phone_yz">
+            <input type="text" value="" id="phone" name="phone" placeholder="输入手机号码">
+            <span class="cuo">✘请输入正确的手机号</span>
+            <span class="dui">✔</span>
+            <span class="cuo2">✘该用户已存在</span>
+          </div>
+          <div class="upwd_yz">
+            <input type="password" value="" id="upwd" name="upwd" placeholder="输入密码">
+            <span class="dui">✔</span>
+            <span class="cuo">✘请输入密码</span>
+          </div>
+          <div class="upwdr_yz">
+            <input type="password" value="" id="upwdr" name="upwdr" placeholder="再次输入密码">
+            <span class="cuo">✘两次输入的密码不一致</span>
+            <span class="dui">✔</span>
+          </div>
+
+          <label for="yzm">
+            <input type="text" value="" id="yzm" name="yzm" placeholder="输入验证码">
+            <button>免费获取验证码</button>
+          </label>
+        </div>
+      </div>
+      <button class="xia_btn" id="reg-btn">立即注册</button>
+      <div class="bottom">
+        <a href="sjrk.html" class="bottom_r">商家注册点这里</a>
+        <a href="dl.html" class="bottom_l">已有账号 , 登录</a>
+      </div>
+    </form>
+  </div>
+  <div class="modal">
+    <div>
+      <p>注册成功</p>
+      <span>✘</span>
+      <button>点击跳转到登录</button>
+    </div>
+  </div>
+</div>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/index.js"></script>
+<script src="js/register.js"></script>
+</body>
+</html>

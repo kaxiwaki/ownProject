@@ -1,0 +1,271 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font: 12px "microsoft yehei", Arial, Helvetica, sans-serif;
+  color: #666;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+dd,
+button {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+button {
+  cursor: pointer;
+}
+.zcContent {
+  width: 100%;
+  height: 900px;
+  position:relative;
+  overflow:hidden;
+}
+.zcContent .xxx {
+  width: 100%;
+  border: 1px solid #FFA5C3;
+}
+.zcContent .zctop {
+  width: 100%;
+  height: 266px;
+  background: url(../img/header.png) no-repeat;
+  overflow: hidden;
+}
+.zcContent .zctop div {
+  width: 924px;
+  height: 92px;
+  margin: 0 auto;
+  margin-top: 104px;
+}
+.zcContent .zctop div h1 {
+  font-size: 42px;
+  color: #777e90;
+}
+.zcContent .zctop div p {
+  font-size: 14px;
+  color: #999;
+  font-weight: 100;
+  margin-top: 10px;
+}
+.zcContent .zctop div p span {
+  color: #d83768;
+}
+.zcContent .zcbd {
+  width: 924px;
+  min-height: 455px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.zcContent .zcbd form {
+  width: 100%;
+  height: 100%;
+}
+.zcContent .zcbd form .form_right {
+  float: right;
+  width: 394px;
+  height: 320px;
+}
+.zcContent .zcbd form .form_right p {
+  color: #C6F0B4;
+  font-size: 1.2em;
+}
+.zcContent .zcbd form .form_right div {
+  width: 161px;
+  height: 161px;
+  margin: 0 auto;
+  margin-top: 12px;
+  background: url(../img/yy.png) no-repeat;
+}
+.zcContent .zcbd form .form_right .sc {
+  color: #777;
+  text-align: center;
+  margin-top: 15px;
+}
+.zcContent .zcbd form .form_right label {
+  width: 100%;
+  height: 56px;
+  display: block;
+  margin-top: 16px;
+}
+.zcContent .zcbd form .form_right label input {
+  width: 100%;
+  height: 56px;
+  border: 1px solid #d7d7d7;
+  font-size: 16px;
+  color: #888;
+  padding-left: 15px;
+  outline: none;
+}
+.zcContent .zcbd form .form_left {
+  width: 465px;
+  height: 320px;
+  border-right: 1px solid #f0eeef;
+}
+.zcContent .zcbd form .form_left p {
+  color: #F56A99;
+  font-size: 1.2em;
+}
+.zcContent .zcbd form .form_left div {
+  width: 370px;
+}
+.zcContent .zcbd form .form_left div input {
+  width: 370px;
+  height: 52px;
+  outline: none;
+  border: 1px solid #d7d7d7;
+  margin-top: 18px;
+  font-size: 16px;
+  color: #888;
+  padding-left: 15px;
+}
+.zcContent .zcbd form .form_left div input:focus {
+  border: 1px solid #FE538B;
+}
+.zcContent .zcbd form .form_left div label {
+  width: 100%;
+}
+.zcContent .zcbd form .form_left div label input {
+  width: 197px;
+}
+.zcContent .zcbd form .form_left div label button {
+  width: 170px;
+  height: 52px;
+  border: none;
+  outline: none;
+  background: #6CCCE1;
+  color: #fff;
+}
+.zcContent .zcbd form .xia_btn {
+  display: block;
+  width: 356px;
+  height: 66px;
+  outline: none;
+  border: none;
+  background: #F56A99;
+  color: #fff;
+  font-size: 2.2em;
+  margin: 0 auto;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+.zcContent .zcbd form .bottom {
+  width: 356px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.zcContent .zcbd form .bottom a {
+  color: #B6B6B6;
+  font-size: 1.4em;
+  text-decoration: underline;
+}
+.zcContent .zcbd form .bottom .bottom_r {
+  float: right;
+}
+.form_left div div{
+    position:relative
+}
+.form_left div div span{
+    position:absolute;
+    top:35px;
+    right:15px;
+    font-size:14px;
+}
+.phone_yz .dui{
+    color:limegreen;
+    display: none;
+}
+.phone_yz .cuo{
+    color:red;
+    display: none;
+}
+.phone_yz .cuo2{
+    color:red;
+    display: none;
+}
+
+.phone_yz span.active{
+    display: block;
+}
+.upwd_yz .dui{
+    color:limegreen;
+    display: none;
+}
+.upwd_yz .cuo{
+     color:red;
+     display: none;
+ }
+.upwd_yz span.active{
+    display: block;
+}
+.upwdr_yz .dui{
+    color:limegreen;
+    display: none;
+}
+.upwdr_yz .cuo{
+    color:red;
+    display: none;
+}
+.upwdr_yz span.active{
+ display: block;
+}
+
+.modal{
+    display: none;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,.5);
+    position:absolute;
+    top:0;
+}
+.modal.active{
+    display: block;
+}
+.modal div{
+    width:300px;
+    height:200px;
+    background: pink;
+    margin:0 auto;
+    margin-top:300px;
+    position:relative;
+    border-radius:50%;
+}
+.modal div span{
+    position:absolute;
+    top:-10px;
+    right:-20px;
+    font-size: 2em;
+    color:#000;
+}
+.modal div button{
+    outline:none;
+    width:150px;
+    height:40px;
+    background: plum;
+    border:none;
+    border-radius:10px;
+    color:#fff;
+    font-size: 1.5em;
+    display: block;
+    margin: 0 auto;
+    margin-top: 35px;
+}
+.modal div p{
+    width:100px;
+    font-size: 2em;
+    margin:0 auto;
+    color:#fff;
+    padding-top: 50px;
+}
