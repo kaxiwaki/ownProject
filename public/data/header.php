@@ -1,4 +1,4 @@
-<?php
+
 <header id="header">
         <div class="red_border"></div>
         <div class="top">
@@ -111,4 +111,3 @@
         </div>
     </header>
     <script src="js/index.js"></script>
-?>

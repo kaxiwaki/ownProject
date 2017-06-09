@@ -1,4 +1,4 @@
-<?php
+
     <footer id="footer">
         <ul class="four_head">
             <li><img src="img/t1.png" alt=""/><span>价格透明全网最低</span></li>
@@ -80,4 +80,3 @@
         </div>
     </footer>
 <script src="js/index.js"></script>
-?>

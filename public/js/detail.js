@@ -1,3 +1,5 @@
+$('#header').load('data/header.php');
+$('#footer').load('data/footer.php');
 $('.bottom').on('click', 'li', function () {
   $(this).toggleClass('active');
 });
@@ -24,17 +26,28 @@ app.run(function ($http) {
   }
 });
 app.controller('hjwCtrl', ['$scope', '$http', '$location', function ($scope, $http) {
-  $http.get('data/sdetail.php?sid=' + 1).success(function (data) {
-    $scope.list = data;
+  $scope.hasLogin=true;
+  $http.get('/hjwDetail/' + 1).success(function (data) {
+    $scope.list = data[0];
     console.log($scope.list);
     $scope.list.sprice=Number($scope.list.sprice);
   });
-  $scope.par={};
-
+  let par={};
+  par.sid=sessionStorage['sid'];
+  par.uid=sessionStorage['uid'];
+  let str='sid='+par.sid+'&uid='+par.uid+'&opayed=1';
+  console.log(str);
   $scope.updateCart = function () {
-    $http.get('data/addcart.php?sid=1&uid=1&opayed=1').success(function (data) {
-      console.log(data);
-    })
+    if(par.uid!==undefined){
+    $http.get('/hjwCart?'+str).success(function (data) {
+     if(data.msg===2){
+       alert('订单出现问题，请刷新后重试！')
+     }else{
+
+     }
+    })}else{
+      $scope.hasLogin=false;
+    }
   }
 }]);
 
