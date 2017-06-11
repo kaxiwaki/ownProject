@@ -72,23 +72,33 @@ $('#footer').load('data/footer.php');
     console.log(wait, prev, cur, next, wait);
   }
 
-  function slide(n) {
+  function slide(n,that) {
     let $acu = $('.box-body .active');
+    that.unbind('click');
     checkLf();
     let lf = parseInt($acu.css('left'));
-    $acu.animate({left: lf + n * 900}, 200);
+    $acu.animate({left: lf + n * 900}, 200,function () {
+      if(n==-1){
+        that.on('click',moveRight)
+      }else{
+        that.on('click',moveleft)
+      }
+    });
   }
-  $('.mask-right').on('click', function () {
-    slide(-1);
-    clickLf < 3 ? clickLf++ : clickLf = 0;
-  });
-  $('.mask-left').delay(1500).click(function () {
-    slide(1);
+  function moveLeft() {
+    let that=$(this);
+    slide(1,that);
     clickLf > 0 ? clickLf-- : clickLf = 3;
-  });
+  }
+  function moveRight() {
+    let that=$(this);
+    slide(-1,that);
+    clickLf < 3 ? clickLf++ : clickLf = 0;
+  }
+  $('.mask-right').on('click',moveRight);
+  $('.mask-left').on('click',moveLeft);
   $('.zpff>ul>li').hover(function () {
     "use strict";
-    console.log(this);
     $(this).children('span').animate({top: -85}, 300);
   }, function () {
     "use strict";
